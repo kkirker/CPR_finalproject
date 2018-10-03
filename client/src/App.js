@@ -7,10 +7,11 @@ import {
   Link
 } from 'react-router-dom'
 
-import Header from './components/Header'
-import Welcome from './pages/Welcome'
-import About from './pages/About'
-import Contact from './pages/Contact'
+import Landing from './pages/Landing'
+import Dashboard from './pages/Dashboard'
+import Results from './pages/Results'
+import Test from './pages/Test'
+
 
 const Content = styled('div')({
   marginTop: 50
@@ -20,16 +21,14 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
-          <Header />
           <Content>
             <Switch>
-              <Route exact path="/" component={Welcome} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
+              <Route exact path="/" component={Landing} />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/test" component={Test} />
+              <Route path="/Results" component={Results} />
             </Switch>
           </Content>
-        </div>
       </Router>
     );
   }
