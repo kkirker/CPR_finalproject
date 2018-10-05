@@ -13,12 +13,19 @@ const styles = theme => ({
   },
 });
 
+const buttonStyle = styled('div')({
+  display: 'flex',
+  
+})
+
 function LoginButton(props) {
   const { classes } = props;
   return (
-    <div>
-      <Button className={classes.button}>Login/Register</Button>
-    </div>
+      <buttonStyle>
+          <Button variant="contained" color="secondary" className={classes.button}>
+          Login / Register
+        </Button>
+    </buttonStyle>
   );
 }
 
