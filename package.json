@@ -24,6 +24,7 @@
     "emotion": "^9.2.10",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
+    "mongoose": "^5.3.1",
     "path": "^0.12.7",
     "react-emotion": "^9.2.10",
     "react-router-dom": "^4.3.1"
