@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
+
+// Initialize Express
 const app = express();
 
 // Define middleware here
@@ -12,7 +15,20 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+// Connect to the Mongo DB
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/cpr_final_project";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
+
+
+//API routes
+
+// Import routes and give the server access to them.
+var routes = require("./routes/api/api.js");
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
