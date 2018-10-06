@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard'
 import Results from './pages/Results'
 import Test from './pages/Test'
 import SignIn from './pages/SignIn'
+import Profile from './pages/Profile'
 
 
 const Content = styled('div')({
@@ -29,6 +30,7 @@ class App extends Component {
               <Route path="/signin" component={SignIn} />
               <Route path="/test" component={Test} />
               <Route path="/Results" component={Results} />
+              <Route path="/Profile" component={Profile} />
             </Switch>
           </Content>
       </Router>
