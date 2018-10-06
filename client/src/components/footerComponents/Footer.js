@@ -1,23 +1,26 @@
 import React from 'react'
 import styled from 'react-emotion'
-import MenuLogin from './MenuLogin'
+
 
 
 const MenuBarStyling = styled('div')({
-  width: '100vw',
+  width: '100%',
   height: '10vh',
   display: 'flex',
-  justifyContent: 'end',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  backgroundColor: '#CAEBF2',
 })
 
 
 
-const MenuBar = ({ text }) => {
+const Footer = () => {
   return (
     <MenuBarStyling>
-        <MenuLogin/>
     </MenuBarStyling>
   )
 }
 
-export default MenuBar
+
+
+export default Footer
