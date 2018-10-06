@@ -13,7 +13,6 @@ const NavLinks = () => (
     <NavStyles to="/dashboard">Dashboard</NavStyles>
     <NavStyles to="/tests">Tests</NavStyles>
     <NavStyles to="/score">Score</NavStyles>
-    <NavStyles to="/profile">Profile</NavStyles>
     <NavStyles to="/resources">Resources</NavStyles>
   </div>
 );

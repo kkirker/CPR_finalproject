@@ -23,7 +23,6 @@ const DashContent = () => (
         <div>
             If you wish to update your profile to include more information, please click on the link to the right?
         </div>
-        <Link to ="/Profile">Link to Profile</Link>
       </div>
       <div>All remaining extra resources can be found here <Link to= "/resources">Link</Link></div>
       {/* <Intro /> //Text
