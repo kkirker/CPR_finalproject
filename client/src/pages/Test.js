@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import TestContainer from '../components/testComponents/TestContainer'
-import MenuBar from '../components/menuBarComponents/MenuBar'
 
 
 const TestPageWrapper = styled('div') ({
@@ -27,8 +26,7 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-            <MenuBar/>
-            <TestContainer/>
+                <TestContainer/>
             </TestPageWrapper>
 
         );
