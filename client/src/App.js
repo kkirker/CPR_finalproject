@@ -13,6 +13,17 @@ import Results from './pages/Results'
 import Test from './pages/Test'
 import SignIn from './pages/SignIn'
 
+//Christie's Firebase Attempt
+import Navigation from './components/navigationComponents/Navigation';
+import LandingPage from './components/Landing';
+import SignUpPage from './components/SignUp';
+import SignInPage from './components/SignIn';
+import PasswordForgetPage from './components/PasswordForget';
+import HomePage from './components/Home';
+import AccountPage from './components/Account';
+import * as routes from './constants/routes';
+import withAuthentication from './components/withAuthentication';
+
 
 const Content = styled('div')({
   marginTop: 0
@@ -23,17 +34,29 @@ class App extends Component {
     return (
       <Router>
           <Content>
-            <Switch>
+          <div>
+      <Navigation />
+
+      <hr/>
+
+      <Route exact path={routes.LANDING} component={Landing} />
+      <Route exact path={routes.SIGN_UP} component={SignUpPage} />
+      <Route exact path={routes.SIGN_IN} component={SignInPage} />
+      <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
+      <Route exact path={routes.HOME} component={HomePage} />
+      <Route exact path={routes.ACCOUNT} component={AccountPage} />
+    </div>
+            {/* <Switch>
               <Route exact path="/" component={Landing} />
               <Route path="/dashboard" component={Dashboard} />
-              <Route path="/signin" component={SignIn} />
               <Route path="/test" component={Test} />
               <Route path="/Results" component={Results} />
-            </Switch>
+            </Switch> */}
           </Content>
       </Router>
     );
   }
 }
 
-export default App;
+// export default App;
+export default withAuthentication(App);
