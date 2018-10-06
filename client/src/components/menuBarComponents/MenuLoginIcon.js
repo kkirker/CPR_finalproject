@@ -1,8 +1,8 @@
 import React from 'react';
+import styled from 'react-emotion'
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
 
 const styles = theme => ({
   button: {
@@ -19,15 +19,21 @@ const styles = theme => ({
   },
 });
 
+const ButtonStyle = styled('div')({
+    
+  })
+
+
+
 function MenuLoginIcon(props) {
   const { classes } = props;
   return (
-    <div>
+    <ButtonStyle>
       <Button variant="contained" color="primary" className={classes.button}>
         Login
-        <Icon className={classes.rightIcon}>send</Icon>
+        {/* <Icon className={classes.rightIcon}>send</Icon> */}
       </Button>
-    </div>
+    </ButtonStyle>
   );
 }
 

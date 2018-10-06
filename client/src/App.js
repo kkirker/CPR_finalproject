@@ -14,7 +14,7 @@ import Test from './pages/Test'
 
 
 const Content = styled('div')({
-  marginTop: 50
+  marginTop: 0
 })
 
 class App extends Component {
