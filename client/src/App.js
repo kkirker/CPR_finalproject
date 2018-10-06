@@ -12,7 +12,7 @@ import Dashboard from './pages/Dashboard'
 import Results from './pages/Results'
 import Test from './pages/Test'
 import SignIn from './pages/SignIn'
-import Account from './components/Account'
+import Account from './pages/Profile'
 
 //Christie's Firebase Attempt
 import Navigation from './components/navigationComponents/Navigation';
@@ -21,7 +21,7 @@ import SignUpPage from './components/SignUp';
 import SignInPage from './components/SignIn';
 import PasswordForgetPage from './components/PasswordForget';
 import HomePage from './components/Home';
-import AccountPage from './components/Account';
+import ProfilePage from './pages/Profile';
 import * as routes from './constants/routes';
 import withAuthentication from './components/withAuthentication';
 
@@ -45,8 +45,9 @@ class App extends Component {
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
       <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route exact path={routes.HOME} component={HomePage} />
-      <Route exact path={routes.ACCOUNT} component={AccountPage} />
-      <Route path="/Account" component={Account} />
+      <Route exact path={routes.PROFILE} component={ProfilePage} />
+      <Route exact path={routes.DASHBOARD} component={Dashboard} />
+      {/* <Route path="/Account" component={Account} /> */}
     </div>
             {/* <Switch>
               <Route exact path="/" component={Landing} />
