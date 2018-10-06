@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import TestContainer from '../components/testComponents/TestContainer'
+import MenuBar from '../components/menuBarComponents/MenuBar'
 
+
+const TestPageWrapper = styled('div') ({
+    backgroundColor: '#A9A9A9',
+    width: '100%',
+    height: '1000px',
+})
 
 class Test extends Component {
 
@@ -19,7 +26,11 @@ class Test extends Component {
 
 
         return(
+            <TestPageWrapper>
+            <MenuBar/>
             <TestContainer/>
+            </TestPageWrapper>
+
         );
     }
 }
