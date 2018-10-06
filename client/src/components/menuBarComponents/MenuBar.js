@@ -14,12 +14,13 @@ const MenuBarStyling = styled('div')({
 
 
 
-const MenuBar = ({ text }) => {
+const MenuBar = (props) => {
   return (
     <MenuBarStyling>
+        {props.children}
         <MenuLogin/>
     </MenuBarStyling>
   )
 }
 
-export default MenuBar
+export default MenuBar;
