@@ -23,11 +23,10 @@ class Question extends Component {
 
         return(
             <QuestionWrapper>
-                <div>
-                    1. I'm Ron Burgundy?
-                </div>
+                <RadioButtonsGroup/>
                 <Dividers/>
                 <RadioButtonsGroup/>
+                <Dividers/>
             </QuestionWrapper>
         );
     }
