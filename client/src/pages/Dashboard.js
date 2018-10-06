@@ -78,3 +78,17 @@
 // }
 
 // export default Contact
+import React from "react";
+import MenuBar from "../components/menuBarComponents/MenuBar";
+import NavLinks from "../components/menuBarComponents/NavBar/NavLinks";
+import DashContent from "../components/dashboard/DashContent"
+const Dashboard = () => (
+  <div>
+    <MenuBar>
+      {/* <Logo /> */}
+      <NavLinks />
+    </MenuBar>
+    <DashContent/>
+  </div>
+);
+export default Dashboard;

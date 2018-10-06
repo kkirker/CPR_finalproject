@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard'
 import Results from './pages/Results'
 import Test from './pages/Test'
 import SignIn from './pages/SignIn'
+import Profile from './pages/Profile'
 
 //Christie's Firebase Attempt
 import Navigation from './components/navigationComponents/Navigation';
@@ -45,6 +46,7 @@ class App extends Component {
       <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route exact path={routes.HOME} component={HomePage} />
       <Route exact path={routes.ACCOUNT} component={AccountPage} />
+      <Route path="/Profile" component={Profile} />
     </div>
             {/* <Switch>
               <Route exact path="/" component={Landing} />
@@ -52,6 +54,7 @@ class App extends Component {
               <Route path="/test" component={Test} />
               <Route path="/Results" component={Results} />
             </Switch> */}
+
           </Content>
       </Router>
     );
