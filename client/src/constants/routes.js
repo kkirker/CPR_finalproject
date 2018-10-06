@@ -6,3 +6,4 @@ export const ACCOUNT = '/account';
 export const PASSWORD_FORGET = '/pw-forget';
 export const TEST = '/test';
 export const RESULTS = '/results';
+
