@@ -32,9 +32,6 @@ const ContentHolder = styled('div')({
     flex: "2"
 });
 
-const 
-
-
 
 const DashContent = () => (
   <Container>
