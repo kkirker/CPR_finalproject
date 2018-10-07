@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'react-emotion'
 
-import AuthUserContext from '../AuthUserContext';
+import AuthUserContext from '../userLoginComponents/AuthUserContext';
 import * as routes from '../../constants/routes';
 import SignInButton from './SignInButton';
 import SignOutButton from './SignOutButton';
@@ -14,6 +14,7 @@ const NavBarStyling = styled('div')({
   width: '100%',
   height: '10vh',
   display: 'flex',
+  flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
   backgroundColor: '#ffffff',
