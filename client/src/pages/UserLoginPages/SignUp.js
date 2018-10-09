@@ -7,6 +7,7 @@ import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 
 
+
 const SignUpPage = ({ history }) =>
   <div>
     <h1>SignUp</h1>
@@ -46,8 +47,9 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        this.setState({ ...INITIAL_STATE });
-        history.push(routes.HOME);
+
+          this.setState({ ...INITIAL_STATE });
+          history.push(routes.HOME);
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
