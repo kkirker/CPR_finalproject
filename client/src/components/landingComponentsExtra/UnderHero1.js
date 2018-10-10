@@ -13,7 +13,7 @@ const UnderHeroWrapper = styled('div') ({
 
 const UnderHero1 = () => {
   return (
-    <UnderHeroWrapper>
+    <UnderHeroWrapper className="container">
         <UnderHeroImage/>
         <UnderHeroBlurb/>
     </UnderHeroWrapper>
