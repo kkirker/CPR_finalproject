@@ -32,7 +32,6 @@ const ContentHolder = styled('div')({
     flex: "2"
 });
 
-
 const DashContent = () => (
   <Container>
     <NavLinks />

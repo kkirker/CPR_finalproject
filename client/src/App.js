@@ -30,6 +30,7 @@ class App extends Component {
       <Router>
           <Content>
           <div>
+
             <Navigation />
             <hr/>
             <Route exact path={routes.LANDING} component={Landing} />
