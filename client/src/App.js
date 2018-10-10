@@ -46,8 +46,7 @@ class App extends Component {
       <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route exact path={routes.HOME} component={HomePage} />
 
-      <Route exact path={routes.ACCOUNT} component={AccountPage} />
-      <Route path="/Account" component={Account} />
+      <Route exact path={routes.PROFILE} component={ProfilePage} />
       <Route exact path={routes.TEST} component={Test}/>
       <Route exact path={routes.RESULTS} component={Results}/>
 
