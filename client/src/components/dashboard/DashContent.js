@@ -2,14 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "react-emotion";
 import NavLinks from "../menuBarComponents/NavBar/NavLinks";
-
+import SimpleModalWrapped from "../modal/SimpleModalWrapped";
+import Button from "../button/Button";
 // Styles
 const Card = styled("div")({
   backgroundColor: "#EFEFEF",
   padding: "20",
-  border: "1px solid black",
   display: "flex",
-  flexDirection: "row"
+  flexDirection: "row",
+  margin: "10px 0px",
+  borderRadius: "5px"
 });
 
 const Container = styled("div")({
@@ -17,8 +19,9 @@ const Container = styled("div")({
   backgroundColor: "#CAEBF2",
   padding: "20",
   boxShadow: "0 0 2 2 rgba(0,0,0,0.4)",
-  flexDirection:"row",
-  display: "flex"
+  flexDirection: "row",
+  display: "flex",
+  margin: "0 auto"
 });
 
 const LinkWrapper = styled("div")({
@@ -27,39 +30,43 @@ const LinkWrapper = styled("div")({
   justifyContent: "spaceBetween"
 });
 
-const ContentHolder = styled('div')({
-    width:'90vw',
-    flex: "2"
+const ContentHolder = styled("div")({
+  width: "90vw",
+  flex: "2"
+});
+
+const TextHolder = styled("div")({
+  flex: "2",
+  textAlign: "center",
+  display: "flex",
+  margin: "auto"
 });
 
 const DashContent = () => (
   <Container>
-    <NavLinks />
+    {/* <NavLinks /> */}
     <ContentHolder>
       <Card>
         Welcome to Still Alive. This webpage was developed to help you pass your
-        written CPR test. On this page, you can do multiple things. Take the
-        tests, check your scores, update your profile, or even look up more
-        resources on CPR.
+        written CPR test. You can take the tests, check your scores, update your
+        profile, or even look up more resources on CPR.
       </Card>
       <Card>
         <LinkWrapper>
-          <Link to="/test">Link to Test</Link>
-          <Link to="/Results">Link to Results</Link>
+          <Button color="Primary" href="/test" Name="Take the Test" />
+          <Button color="Secondary" href="/score" Name="Check your Score" />
         </LinkWrapper>
-        <div>
+        <TextHolder>
           If you wish to complete the Test or see what your current results look
-          like. Please click on the two links to the left.{" "}
-        </div>
+          like. Please click on the two links to the left.
+        </TextHolder>
       </Card>
       <Card>
-        <div>
+        {/* <div>
           If you wish to update your profile to include more information, please
           click on the link to the right?
-        </div>
-        <LinkWrapper>
-          <Link to="/Profile">Link to Profile</Link>
-        </LinkWrapper>
+        </div> */}
+          <SimpleModalWrapped/>
       </Card>
       <Card>
         All remaining extra resources can be found here{" "}
