@@ -6,6 +6,8 @@ const PORT = process.env.PORT || 3001;
 
 // Initialize Express
 const app = express();
+var db = require("./models");
+
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,8 +29,20 @@ mongoose.connect(MONGODB_URI);
 //API routes
 
 // Import routes and give the server access to them.
-var routes = require("./routes/api/api.js");
-app.use(routes);
+// let routes = require("./routes/api/api.js");
+// app.use(routes);
+// Above file not being used, couldn't get it to hook up correctly 
+
+app.post("/user/new", function(req, res){
+  db.User.create(req.body)
+  .then(function(newUser){
+      res.send(newUser);
+  })
+  .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+  });
+})
 
 // Send every other request to the React app
 // Define any API routes before this runs

@@ -5,8 +5,8 @@ import NavLinks from "../components/menuBarComponents/NavBar/NavLinks";
 import DashContent from "../components/dashboard/DashContent"
 
 
-import AuthUserContext from '../components/AuthUserContext';
-import withAuthorization from '../components/withAuthorization';
+import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
+import withAuthorization from '../components/userLoginComponents/withAuthorization';
 
 
 const Dashboard = () => (
