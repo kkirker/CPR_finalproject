@@ -11,19 +11,13 @@ import Landing from './pages/Landing'
 import Dashboard from './pages/Dashboard'
 import Results from './pages/Results'
 import Test from './pages/Test'
-import SignIn from './pages/SignIn'
-import Account from './pages/Profile'
-
-//Christie's Firebase Attempt
+import Profile from './pages/Profile'
 import Navigation from './components/navigationComponents/Navigation';
-import LandingPage from './components/Landing';
-import SignUpPage from './components/SignUp';
-import SignInPage from './components/SignIn';
-import PasswordForgetPage from './components/PasswordForget';
-import HomePage from './components/Home';
-import ProfilePage from './pages/Profile';
+import SignUpPage from './pages/UserLoginPages/SignUp';
+import SignInPage from './pages/UserLoginPages/SignIn';
+import PasswordForgetPage from './pages/UserLoginPages/PasswordForget';
 import * as routes from './constants/routes';
-import withAuthentication from './components/withAuthentication';
+import withAuthentication from './components/userLoginComponents/withAuthentication';
 
 
 const Content = styled('div')({
@@ -36,29 +30,17 @@ class App extends Component {
       <Router>
           <Content>
           <div>
-      <Navigation />
-
-      <hr/>
-
-      <Route exact path={routes.LANDING} component={Landing} />
-      <Route exact path={routes.SIGN_UP} component={SignUpPage} />
-      <Route exact path={routes.SIGN_IN} component={SignInPage} />
-      <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route exact path={routes.HOME} component={HomePage} />
-
-      {/* <Route exact path={routes.ACCOUNT} component={AccountPage} /> */}
-      <Route path="/Account" component={Account} />
-      <Route exact path={routes.TEST} component={Test}/>
-      <Route exact path={routes.RESULTS} component={Results}/>
-
-    </div>
-            {/* <Switch>
-              <Route exact path="/" component={Landing} />
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/test" component={Test} />
-              <Route path="/Results" component={Results} />
-            </Switch> */}
-
+            <Navigation />
+            <hr/>
+            <Route exact path={routes.LANDING} component={Landing} />
+            <Route exact path={routes.SIGN_UP} component={SignUpPage} />
+            <Route exact path={routes.SIGN_IN} component={SignInPage} />
+            <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
+            <Route exact path={routes.DASHBOARD} component={Dashboard} />
+            <Route exact path={routes.PROFILE} component={Profile} />
+            <Route exact path={routes.TEST} component={Test}/>
+            <Route exact path={routes.RESULTS} component={Results}/>
+          </div>
           </Content>
       </Router>
     );
