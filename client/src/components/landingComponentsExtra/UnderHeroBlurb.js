@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'react-emotion'
 
 const UnderHeroBlurbWrapper = styled('div') ({
+  padding: '20px'
     
 })
 
@@ -9,7 +10,7 @@ const UnderHeroBlurbWrapper = styled('div') ({
 const UnderHeroBlurb = () => {
   return (
     <UnderHeroBlurbWrapper>
-        <div>here is a blurb of info where we will say stuff about our site that people should know, it might describe what is in the picture next to it, we'll figure it out</div>
+        <div>Train in an accelerated format at your location (training at work, home, you name it - we come to you!) using the knowledge of the industry's leading professionals, presented in an entertaining and informative manner. Our OSHA Safety Training Classes are offered in a "corporate style", streamlined format ~ designed to comply with most current OSHA, ECC/ILCOR and other National regulations, yet still saving time and money by cutting out unnecessary breaks and video time. First Aid Training, CPR Courses , AED, BBP + 100 other safety topics!</div>
     </UnderHeroBlurbWrapper>
   )
 }

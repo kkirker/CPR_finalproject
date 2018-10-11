@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 import MenuLogin from './MenuLogin'
+import Logo from '../logoComponents/logo'
 
 
 const MenuBarStyling = styled('div')({
@@ -17,6 +18,7 @@ const MenuBarStyling = styled('div')({
 const MenuBar = (props) => {
   return (
     <MenuBarStyling>
+        <Logo />
         {props.children}
         <MenuLogin/>
     </MenuBarStyling>
