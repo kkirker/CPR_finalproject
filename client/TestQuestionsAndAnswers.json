@@ -1,0 +1,528 @@
+[
+    {
+      "id": 1,
+      "Question": "1)When should personal protective equipment such as gloves and/or CPR barrier devices be used?",
+      "Options": {
+        "1": "Only when the casualty is bleeding",
+        "2": "Only when the casualty appears to be ill",
+        "3": "Only when the casualty does not appear to be young and healthy",
+        "4": "Every time with everyone"
+      },
+      "Answer": "Every time with everyone"
+    },
+    {
+        "id": 2,
+        "Question": "2)While attempting to ventilate an unconscious adult casualty, you realize that your breaths are not going all the way into their lungs.  You should first:",
+        "Options": {
+          "1": "Begin chest compressions",
+          "2": "Re-tilt the casualty’s head and try to ventilate a second time",
+          "3": "Perform the Heimlich Maneuver",
+          "4": "Tap and shout"
+        },
+        "Answer": "Re-tilt the casualty’s head and try to ventilate a second time"
+      },
+      {
+        "id": 3,
+        "Question": "3)“Tap and Shout” is preferred over “Shake and Shout” because of the risk of further spinal injury.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 4,
+        "Question": "4)After determining an adult casualty is unresponsive, quickly check for a pulse (no more than 10 seconds), then:",
+        "Options": {
+          "1": "Activate EMS and retrieve an AED if available",
+          "2": "Tap and shout",
+          "3": "Open the casualty’s airway",
+          "4": "Begin effective chest compressions "
+        },
+        "Answer": "Activate EMS and retrieve an AED if available"
+      },
+      {
+        "id": 5,
+        "Question": "5)If a casualty exclaims, “Help me, I’m choking!” you should immediately begin the Heimlich Maneuver.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "False"
+      },
+      {
+        "id": 6,
+        "Question": "6)What must you obtain from a conscious, adult casualty before you give any first aid assistance?",
+        "Options": {
+          "1": "Proof of insurance",
+          "2": "A medical history",
+          "3": "Consent",
+          "4": "Their wallet"
+        },
+        "Answer": "Consent"
+      },
+      {
+        "id": 7,
+        "Question": "7)An individual begins to complain of prolonged chest pain, numbness on the left side, and breathing difficulty.  For what emergency should this person be treated?",
+        "Options": {
+          "1": "Indigestion",
+          "2": "Asthma attack",
+          "3": "Heart Attack",
+          "4": "Stroke"
+        },
+        "Answer": "Heart Attack"
+      },
+      {
+        "id": 8,
+        "Question": "8)The “Universal Signal” for choking is:",
+        "Options": {
+          "1": "Casualty exclaims, “I’m choking!”",
+          "2": "Casualty clutches at his/her heart",
+          "3": "Casualty grasps at your throat",
+          "4": "Casualty places his/her hands at or around his/her throat"
+        },
+        "Answer": "Casualty places his/her hands at or around his/her throat"
+      },
+      {
+        "id": 9,
+        "Question": "9)A choking infant should be treated with the Heimlich Maneuver.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "False"
+      },
+      {
+        "id": 10,
+        "Question": "10)If a trained rescuer is unwilling or otherwise unable to perform full CPR, they should still perform Compression-Only CPR™.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 11,
+        "Question": "11)Once CPR has begun, which of the following situations will legally allow a rescuer to stop?",
+        "Options": {
+          "1": "The casualty’s ribs break",
+          "2": "The casualty vomits",
+          "3": "15 minutes have elapsed since CPR was initiated",
+          "4": "None of the above"
+        },
+        "Answer": "None of the above"
+      },
+      {
+        "id": 12,
+        "Question": "12)Which of the following foods contain High Saturated Fats?",
+        "Options": {
+          "1": "Vegetables",
+          "2": "Bacon",
+          "3": "Cereals",
+          "4": "None of the above"
+        },
+        "Answer": "Bacon"
+      },
+      {
+        "id": 13,
+        "Question": "13)The gradual buildup of fatty deposits on the interior lining of the arteries is called:",
+        "Options": {
+          "1": "Gingivitis",
+          "2": "Atherosclerosis",
+          "3": "Defibrillation",
+          "4": "Dandruff"
+        },
+        "Answer": "Atherosclerosis"
+      },
+      {
+        "id": 14,
+        "Question": "14)Without oxygen, brain death will usually begin within:",
+        "Options": {
+          "1": "30 seconds",
+          "2": "1 hour or more",
+          "3": "4 to 6 minutes",
+          "4": "6 to 10 minutes"
+        },
+        "Answer": "4 to 6 minutes"
+      },
+      {
+        "id": 15,
+        "Question": "15)For many people, smoking cessation, regular aerobic exercise and a low-fat diet can help reduce High Blood Pressure and Heart Attack Risk.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 16,
+        "Question": "16)Signs and symptoms of a heart attack may include:",
+        "Options": {
+          "1": "The casualty complains of chest pains",
+          "2": "The casualty becomes dizzy or nauseated",
+          "3": "The casualty’s skin become pale, cool, and clammy",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 17,
+        "Question": "17)Heart attacks or strokes can occur because:",
+        "Options": {
+          "1": "A blood clot blocks a major artery",
+          "2": "A major blood vessel bursts",
+          "3": "Fat buildup in the circulatory system stops or significantly slows blood flow",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 18,
+        "Question": "18)Rescuers should administer C.A.R.E. CPR™ on a drowning casualty.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 19,
+        "Question": "19)An adult who has pulse but is not breathing should be given Rescue Breaths at a rate of:",
+        "Options": {
+          "1": "1 breath every 5-6 seconds",
+          "2": "5 breaths every 1 second",
+          "3": "1 breath every 30 seconds",
+          "4": "2 breaths every 15 seconds"
+        },
+        "Answer": "1 breath every 5-6 seconds"
+      },
+      {
+        "id": 20,
+        "Question": "20)A child or infant who has a pulse but is not breathing should be given Rescue Breaths at a rate of:",
+        "Options": {
+          "1": "1 breath every 3 seconds",
+          "2": "5 breaths every 1 second",
+          "3": "1 breath every 30 seconds",
+          "4": "2 breaths every 15 seconds"
+        },
+        "Answer": "1 breath every 3 seconds"
+      },
+      {
+        "id": 21,
+        "Question": "21)The “Good Samaritan Law” is designed to help protect rescuers from civil lawsuits, as long as they act in “Good Faith” and are not reckless or negligent.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 22,
+        "Question": "22)The Rescue Breath to Chest Compression ratio for Adult CPR (one rescuer) is:",
+        "Options": {
+          "1": "15 breaths every 2 compressions",
+          "2": "2 breaths every 30 compressions",
+          "3": "1 breath every 5 compressions",
+          "4": "5 breaths every 1 compression"
+        },
+        "Answer": "2 breaths every 30 compressions"
+      },
+      {
+        "id": 23,
+        "Question": "23)The Rescue Breath to Chest Compression ratio for Child / Infant CPR (two rescuers) is:",
+        "Options": {
+          "1": "2 breaths every 15 compressions",
+          "2": "15 breaths every 2 compressions",
+          "3": "1 breath every 5 compressions",
+          "4": "5 breaths every 1 compression"
+        },
+        "Answer": "2 breaths every 15 compressions"
+      },
+      {
+        "id": 24,
+        "Question": "24)During CPR, the chest of the Adult should be compressed:",
+        "Options": {
+          "1": "1/2” ",
+          "2": "1” ",
+          "3": "At least 2”",
+          "4": "At least 8” deep"
+        },
+        "Answer": "At least 2”"
+      },
+      {
+        "id": 25,
+        "Question": "25)During CPR, the chest of the Child should be compressed:",
+        "Options": {
+          "1": "1/2” ",
+          "2": "1” ",
+          "3": "2”",
+          "4": "At least 8” deep"
+        },
+        "Answer": "2”"
+      },
+      {
+        "id": 26,
+        "Question": "26)During CPR, the chest of the Infant should be compressed:",
+        "Options": {
+          "1": "1/2”",
+          "2": "1” to 1 1/2” ",
+          "3": "2”",
+          "4": "At least 8” deep"
+        },
+        "Answer": "1” to 1 1/2” "
+      },
+      {
+        "id": 27,
+        "Question": "27)Chest compressions on an Adult should be performed using:",
+        "Options": {
+          "1": "Two hands, with fingers interlocked",
+          "2": "The heel of one hand",
+          "3": "Two fingers",
+          "4": "The knee"
+        },
+        "Answer": "Two hands, with fingers interlocked"
+      },
+      {
+        "id": 28,
+        "Question": "28)Chest compressions on a Child should be performed using:",
+        "Options": {
+          "1": "Two hands, with fingers interlocked",
+          "2": "The heel of one hand",
+          "3": "The use of one or two hands is determined by the size rescuer in relation to the child casualty.",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 29,
+        "Question": "29)Chest compressions on an Infant should be performed using:",
+        "Options": {
+          "1": "Two hands, with fingers interlocked",
+          "2": "The heel of one hand",
+          "3": "Two fingers ",
+          "4": "The knee"
+        },
+        "Answer": "Two fingers "
+      },
+      {
+        "id": 30,
+        "Question": "30)An Automated External Defibrillator (AE is used on casualties of cardiac arrest to:",
+        "Options": {
+          "1": "Replace breathing and heartbeat",
+          "2": "Restore the normal electrical activity to the heart ",
+          "3": "Help reduce fat buildup inside the arteries",
+          "4": "Predict the likelihood of future heart attacks"
+        },
+        "Answer": "Restore the normal electrical activity to the heart "
+      },
+      {
+        "id": 31,
+        "Question": "31)Defibrillation is more effective than CPR in restoring a casualty’s normal heart rhythm. ",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 32,
+        "Question": "32)Even when CPR is performed properly, which of the following may occur?",
+        "Options": {
+          "1": "The casualty may vomit",
+          "2": "Ribs may be broken by the chest compressions",
+          "3": "Internal organs may be damaged",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 33,
+        "Question": "33)To provide effective chest compressions:",
+        "Options": {
+          "1": "Make sure the AED unit is turned on",
+          "2": "Place your hands on the lower abdomen, near the navel",
+          "3": "Allow complete recoil after each compression",
+          "4": "Rest when you get tired and need a break "
+        },
+        "Answer": "Allow complete recoil after each compression"
+      },
+      {
+        "id": 34,
+        "Question": "34)Properly performed Two-Rescuer CPR is usually considered more effective than One-Rescuer CPR, particularly on adult casualties.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 35,
+        "Question": "35)The term “Biological Death” means that:",
+        "Options": {
+          "1": "Breathing has stopped",
+          "2": "Brain death has occurred",
+          "3": "The casualty has suffered damage to the heart or lungs",
+          "4": "The casualty will experience a full recovery"
+        },
+        "Answer": "Brain death has occurred"
+      },
+      {
+        "id": 36,
+        "Question": "36)During CPR, the rate of chest compressions for an Adult casualty should be:",
+        "Options": {
+          "1": "40-60 compressions per minute",
+          "2": "At least 100 compressions per minute",
+          "3": "10 compressions per minute",
+          "4": "At least 200 compressions per minute"
+        },
+        "Answer": "At least 100 compressions per minute"
+      },
+      {
+        "id": 37,
+        "Question": "37)During CPR, the rate of chest compressions for a Child casualty should be:",
+        "Options": {
+          "1": "40-60 compressions per minute",
+          "2": "About 10 compressions per minute",
+          "3": "At least 100 compressions per minute",
+          "4": "At least 200 compressions per minute"
+        },
+        "Answer": "At least 100 compressions per minute"
+      },
+      {
+        "id": 38,
+        "Question": "38)During CPR, the rate of chest compressions for an Infant casualty should be:",
+        "Options": {
+          "1": "40-60 compressions per minute",
+          "2": "About 10 compressions per minute",
+          "3": "200 compressions per minute",
+          "4": "At least 100 compressions per minute"
+        },
+        "Answer": "At least 100 compressions per minute"
+      },
+      {
+        "id": 39,
+        "Question": "39)Child CPR should be performed on:",
+        "Options": {
+          "1": "Individuals under the age of 1 year, or equivalent body size",
+          "2": "Individuals between the age of 1 and 8 years, or equivalent body size",
+          "3": "Individuals above the age of 8 years, or equivalent body size",
+          "4": "Newborns"
+        },
+        "Answer": "Individuals between the age of 1 and 8 years, or equivalent body size"
+      },
+      {
+        "id": 40,
+        "Question": "40)Cardiovascular disease is the leading cause of death in America.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 41,
+        "Question": "41)For neo-natal casualties and/or newly born infants, the current recommendation is to administer care based on the ABC sequence of steps for CPR.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 42,
+        "Question": "42)Which of the following are Risk Factors for Cardiovascular Disease?",
+        "Options": {
+          "1": "Stress",
+          "2": "Diet",
+          "3": "Smoking",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 43,
+        "Question": "43)During a heart attack, chest pain often radiates from the center of the chest:",
+        "Options": {
+          "1": "Upward, toward the neck and jaw",
+          "2": "Out to the left shoulder and arm",
+          "3": "To the casualty’s back",
+          "4": "All of the above"
+        },
+        "Answer": "All of the above"
+      },
+      {
+        "id": 44,
+        "Question": "44)A heart attack always means that the heart has stopped beating.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "False"
+      },
+      {
+        "id": 45,
+        "Question": "45)What is the initial step to take before beginning treatment of an individual experiencing sudden cardiac arrest?",
+        "Options": {
+          "1": "Immediately activate EMS by calling 911",
+          "2": "Immediately begin Rescue Breathing",
+          "3": "Wait approximately 15 minutes, then re-evaluate the casualty",
+          "4": "Immediately transport the casualty by car to the nearest hospital"
+        },
+        "Answer": "Immediately activate EMS by calling 911"
+      },
+      {
+        "id": 46,
+        "Question": "46)Chest compressions during CPR are designed primarily to circulate oxygenated blood to vital organs.",
+        "Options": {
+          "1": "True",
+          "2": "False"
+        },
+        "Answer": "True"
+      },
+      {
+        "id": 47,
+        "Question": "47)Bluish skin or lips is usually an indication of what condition?",
+        "Options": {
+          "1": "Lack of Carbon Dioxide",
+          "2": "Lack of oxygen",
+          "3": "Too much oxygen",
+          "4": "Too much makeup"
+        },
+        "Answer": "Lack of oxygen"
+      },
+      {
+        "id": 48,
+        "Question": "48)The Carotid Artery pulse is located:",
+        "Options": {
+          "1": "On the upper arm",
+          "2": "On the inside of the thigh",
+          "3": "On the side of the neck",
+          "4": "On the center of the chest"
+        },
+        "Answer": "On the side of the neck"
+      },
+      {
+        "id": 49,
+        "Question": "49)The Brachial Artery pulse is located:",
+        "Options": {
+          "1": "On the inside of the upper arm",
+          "2": "On the inside of the thigh",
+          "3": "On the side of the neck",
+          "4": "On the center of the chest"
+        },
+        "Answer": "On the inside of the upper arm"
+      },
+      {
+        "id": 50,
+        "Question": "50)C.A.R.E. CPR™ is essentially the process of:",
+        "Options": {
+          "1": "Reviving injured casualties at an accident scene",
+          "2": "Eliminating airway blockages",
+          "3": "Activating EMS and treating for shock",
+          "4": "Replacing breathing and heartbeat"
+        },
+        "Answer": "Replacing breathing and heartbeat"
+      }
+    
+  ]
+  
