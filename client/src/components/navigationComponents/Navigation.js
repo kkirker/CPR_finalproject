@@ -20,6 +20,17 @@ const NavBarStyling = styled('div')({
   backgroundColor: '#ffffff',
 })
 
+const RowStyling = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center'
+})
+
+const NavItem = styled('div')({
+  padding: '1vh'
+
+})
 
 
 const Navigation = () =>
@@ -34,20 +45,33 @@ const Navigation = () =>
 
 
   const NavigationAuth = () =>
-  <ul>
-  <li><Link to={routes.LANDING}>Home</Link></li>
-  <li><Link to={routes.PROFILE}>Profile</Link></li>
-  <li><SignOutButton/> </li>
-  {/* <NavCTAButton name="Sign Out"/> */}
-  </ul>
+  // <ul>
+  // <li><Link to={routes.LANDING}>Home</Link></li>
+  // <li><Link to={routes.PROFILE}>Profile</Link></li>
+  // <li><SignOutButton/> </li>
+  // {/* <NavCTAButton name="Sign Out"/> */}
+  // </ul>
+
+  <RowStyling>
+    <NavItem><Link to={routes.LANDING}>Home</Link></NavItem>
+    <NavItem><Link to={routes.PROFILE}>Profile</Link></NavItem>
+    <NavItem><SignOutButton/></NavItem>
+  </RowStyling>
+
+
 
   const NavigationNonAuth = () =>
-  <ul>
-  <li><Link to={routes.LANDING}>Home</Link></li>
-  {/* <li><Link to={routes.SIGN_IN}>Sign In</Link></li> */}
-  <li><SignInButton/></li>
+  // <ul>
+  // <li><Link to={routes.LANDING}>Home</Link></li>
+  // {/* <li><Link to={routes.SIGN_IN}>Sign In</Link></li> */}
+  // <li><SignInButton/></li>
 
-  {/* <NavCTAButton name="Sign In"/> */}
-  </ul>
+  // {/* <NavCTAButton name="Sign In"/> */}
+  // </ul>
+
+  <RowStyling>
+    <div><Link to={routes.LANDING}>Home</Link></div>
+    <div><SignInButton/></div>
+  </RowStyling>
 
 export default Navigation;
