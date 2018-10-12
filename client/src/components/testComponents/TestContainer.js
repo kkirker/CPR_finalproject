@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'react-emotion'
 import Question from './Question'
+import TestStartButton from './TestStartButton'
+
 
 
 const TestContainerStyle = styled('div') ({
@@ -17,16 +19,19 @@ const QuestionsStyle = styled('div') ({
     borderStyle: 'solid',
 })
 
-const TestContainer = () => {
-    return (
+
+
+const TestContainer = (props) => {
+        
+        return(
         <TestContainerStyle>
                 <h1>CPR Test</h1>
+                {/* <TestStartButton onClick={props.handleClick}/> */}
             <QuestionsStyle>
-                
-                <Question/>
+                {/* { props.displayQuestions } */}
             </QuestionsStyle>
         </TestContainerStyle>
-    )
-}
+        )
+    }
 
 export default TestContainer
