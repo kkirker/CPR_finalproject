@@ -5,8 +5,7 @@ import {
 } from 'react-router-dom';
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
-
-
+import API from "../../utils/API";
 
 const SignUpPage = ({ history }) =>
   <div>
@@ -16,6 +15,9 @@ const SignUpPage = ({ history }) =>
 
 
 const INITIAL_STATE = {
+  fbUserID: '',
+  firstname: '',
+  lastname: '',
   username: '',
   email: '',
   passwordOne: '',
@@ -36,6 +38,9 @@ class SignUpForm extends Component {
 
   onSubmit = (event) => {
     const {
+      fbUserID,
+      firstname,
+      lastname,
       username,
       email,
       passwordOne,
@@ -48,8 +53,25 @@ class SignUpForm extends Component {
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
 
-          this.setState({ ...INITIAL_STATE });
-          history.push(routes.HOME);
+        //Create the user in mongodb, using the firebase ID from authUser
+          API.createUser({
+            fbUserID: authUser.user.uid,
+            firstName: firstname,
+            lastName: lastname,
+            email: email,
+            score: 0,
+            textVersion: '1.0'
+          })
+          .then( () => {
+            this.setState({ ...INITIAL_STATE });
+            history.push(routes.HOME);
+          })
+          .catch(error => {
+            this.setState(byPropKey('error', error));
+          });
+
+          // this.setState({ ...INITIAL_STATE });
+          // history.push(routes.HOME);
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
@@ -63,6 +85,8 @@ class SignUpForm extends Component {
   render() {
 
     const {
+      firstname,
+      lastname,
       username,
       email,
       passwordOne,
@@ -79,10 +103,16 @@ class SignUpForm extends Component {
     return (
       <form onSubmit={this.onSubmit}>
       <input
-          value={username}
-          onChange={event => this.setState(byPropKey('username', event.target.value))}
+          value={firstname}
+          onChange={event => this.setState(byPropKey('firstname', event.target.value))}
           type="text"
-          placeholder="Full Name"
+          placeholder="First Name"
+        />
+         <input
+          value={lastname}
+          onChange={event => this.setState(byPropKey('lastname', event.target.value))}
+          type="text"
+          placeholder="Last Name"
         />
         <input
           value={email}
