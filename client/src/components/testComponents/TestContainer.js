@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion'
 import Question from './Question'
+import TestSubmitButton from './TestSubmitButton';
 
 const TestContainerStyle = styled('div') ({
     paddingRight: '100px',
@@ -19,6 +20,11 @@ const QuestionsStyle = styled('div') ({
     backgroundColor: 'rgb(239, 239, 239)',
 })
 
+const TestSubmitButtonStyle = styled('div') ({
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '50px',
+})
 
 
 const TestContainer = (props) => {
@@ -40,6 +46,9 @@ const TestContainer = (props) => {
                 
             )): null}
             </QuestionsStyle>
+            <TestSubmitButtonStyle>
+            {props.displayQuestions ? <TestSubmitButton/>:null}
+            </TestSubmitButtonStyle>
         </TestContainerStyle>
         )
     }
