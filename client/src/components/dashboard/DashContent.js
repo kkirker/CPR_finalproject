@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "react-emotion";
-import NavLinks from "../menuBarComponents/NavBar/NavLinks";
-import SimpleModalWrapped from "../modal/SimpleModalWrapped";
 import Button from "../button/Button";
+
 // Styles
 const Card = styled("div")({
   backgroundColor: "#EFEFEF",
@@ -62,11 +61,13 @@ const DashContent = () => (
         </TextHolder>
       </Card>
       <Card>
-        {/* <div>
+        <div>
           If you wish to update your profile to include more information, please
           click on the link to the right?
-        </div> */}
-          <SimpleModalWrapped/>
+        </div>
+        <LinkWrapper>
+          <Button color="Primary" href="/profile" Name="Enter Profile Pages" />
+        </LinkWrapper>
       </Card>
       <Card>
         All remaining extra resources can be found here{" "}
