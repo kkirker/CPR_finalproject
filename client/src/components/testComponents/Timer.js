@@ -1,26 +1,33 @@
 import React, { Component } from "react";
 import TimerDisplay from "./TimerDisplay"
 
-class Timer extends Component {
+export default class Timer extends Component {
   state = {
-      time = 1200,
-      minutes,
-      seconds
+      time:1200,
+      minutes: 0,
+      seconds: 0,
+      display: false,
+      timer: false
   };
 
-componentDidMount(){
-  setInterval(countDown,1000);
-    
+componentDidUpdate(){
+  console.log(this.props);
+  
+  if (this.props.display === true && !this.state.timer) {
+      let timer = setInterval(this.countDown,1000);
+      this.setState({ timer })
+  }
 }
     
 // Functions for timer countdown
   countDown= ()=>{
     console.log('foo')
-    setState(this.state.time -=1);
+    let time = this.state.time - 1
+    this.setState({time});
     if(this.state.time >0){
       console.log(this.state.time)
-      let timer = calTime(this.state.time)
-      setState({ minutes= timer.minutes, seconds = timer.seconds })
+      let timer = this.calcTime(this.state.time)
+      this.setState({ minutes: timer.minutes, seconds : timer.seconds }) 
   };
 }
 
@@ -36,7 +43,9 @@ componentDidMount(){
 
 render () { 
   return(
+
     <TimerDisplay minutes={this.state.minutes} seconds = {this.state.seconds} />
+    
   )
 }
 }

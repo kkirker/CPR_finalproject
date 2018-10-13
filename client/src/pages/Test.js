@@ -42,9 +42,11 @@ class Test extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        this.setState(state => ({
+        console.log('foo');
+        
+        this.setState({
             showQuestions: true
-        }));
+        });
         console.log(this.state.showQuestions);
         this.displayQuestions();
     }
@@ -55,13 +57,7 @@ class Test extends Component {
             )
         
     }
-    displayTimer =() =>{
-        if(this.state.showQuestions){
-            return(
-                <Timer/>
-            )
-        }
-    }
+    
 
 
     render() {
@@ -70,7 +66,8 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-                <Timer/>
+                {/* <Timer/> */}
+                <Timer display={this.state.showQuestions}/>
                 <TestContainer displayQuestions={this.state.showQuestions && <Question />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
                 <TestButtonWrapper>
                     <TestStartButton handleClick={this.handleClick}/>
