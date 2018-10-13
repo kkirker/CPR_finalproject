@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import styled from 'react-emotion'
 import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
-import TestStartButton from '../components/testComponents/TestStartButton';
+import TestStartButton from '../components/testComponents/TestStartButton'
 import Timer from '../components/testComponents/Timer'
 import CPRTest from '../CPRTest.json'
+import TestSubmitButton from '../components/testComponents/TestSubmitButton'
 
 const TestPageWrapper = styled('div') ({
     backgroundColor: '#A9A9A9',
@@ -49,6 +50,11 @@ class Test extends Component {
         });
         console.log(this.state.showQuestions);
         this.displayQuestions();
+        this.displaySubmitButton();
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     displayQuestions = () => {
@@ -57,6 +63,13 @@ class Test extends Component {
             )
         
     }
+
+    displaySubmitButton = () => {
+        return(
+            <TestSubmitButton/>
+        )
+    
+}
     
 
 
@@ -66,10 +79,9 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-                {/* <Timer/> */}
-                <Timer display={this.state.showQuestions}/>
-                <TestContainer displayQuestions={this.state.showQuestions && <Question />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
-                <TestButtonWrapper>
+                {/* <Timer display={this.state.showQuestions}/> */}
+                <TestContainer displayQuestions={this.state.showQuestions && <Question />} displaySubmitButton={this.state.showQuestions && <TestSubmitButton />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
+                <TestButtonWrapper >
                     <TestStartButton handleClick={this.handleClick}/>
                 </TestButtonWrapper>
             </TestPageWrapper>
