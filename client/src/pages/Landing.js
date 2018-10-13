@@ -20,8 +20,8 @@ class About extends Component {
 
     return(
       <LandPageWrapper>
-        <MenuBar/>
-        <MenuBarSpacing/>  
+        {/* <MenuBar/> */}
+        {/* <MenuBarSpacing/>   */}
           <Hero cpr={cpr} landingText={landingText} smallerText={smallerText}>
           </Hero>
         <UnderHero1/>

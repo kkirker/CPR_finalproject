@@ -34,7 +34,7 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
-          <FormLabel component="legend">Question Placeholder</FormLabel>
+          <FormLabel component="legend">{this.props.question}</FormLabel>
           <RadioGroup
             aria-label="Gender"
             name="gender1"
@@ -42,11 +42,10 @@ class RadioButtonsGroup extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value="A" control={<Radio />} label="Answer 1" />
-            <FormControlLabel value="B" control={<Radio />} label="Answer 2" />
-            <FormControlLabel value="C" control={<Radio />} label="Answer 3" />
-            <FormControlLabel value="D" control={<Radio />} label="Answer 4" />
-            <FormControlLabel value="E" control={<Radio />} label="Answer 5" />
+            <FormControlLabel value="1" control={<Radio />} label={this.props.options.A} />
+            <FormControlLabel value="2" control={<Radio />} label={this.props.options.B} />
+            <FormControlLabel value="3" control={<Radio />} label={this.props.options.C} />
+            <FormControlLabel value="4" control={<Radio />} label={this.props.options.D} />
           </RadioGroup>
         </FormControl>
       </div>
