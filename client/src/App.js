@@ -20,11 +20,15 @@ import * as routes from './constants/routes';
 import withAuthentication from './components/userLoginComponents/withAuthentication';
 
 
+
 const Content = styled('div')({
   marginTop: 0
 })
 
 class App extends Component {
+
+
+
   render() {
     return (
       <Router>
@@ -42,6 +46,7 @@ class App extends Component {
             <Route exact path={routes.TEST} component={Test}/>
             <Route exact path={routes.RESULTS} component={Results}/>
           </div>
+          
           </Content>
       </Router>
     );
