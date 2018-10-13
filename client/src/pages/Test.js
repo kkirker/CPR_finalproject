@@ -12,6 +12,7 @@ const TestPageWrapper = styled('div') ({
     width: '100%',
     minHeight: '100vh;',
     height: '100%',
+    paddingTop:'.1px'
 })
 
 const TestButtonWrapper = styled('div') ({
@@ -79,7 +80,7 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-                {/* <Timer display={this.state.showQuestions}/> */}
+                <Timer display={this.state.showQuestions} props = {this.props}/>
                 <TestContainer displayQuestions={this.state.showQuestions && <Question />} displaySubmitButton={this.state.showQuestions && <TestSubmitButton />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
                 <TestButtonWrapper >
                     <TestStartButton handleClick={this.handleClick}/>
