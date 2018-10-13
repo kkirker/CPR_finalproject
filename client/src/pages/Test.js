@@ -32,7 +32,8 @@ class Test extends Component {
           CPRTest,
           AnswersObj: {
               
-          }
+          },
+          
         };
         this.handleClick = this.handleClick.bind(this);
       }

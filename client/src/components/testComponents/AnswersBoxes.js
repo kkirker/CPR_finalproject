@@ -21,11 +21,12 @@ const styles = theme => ({
 
 class RadioButtonsGroup extends React.Component {
   state = {
-    value: 'Question',
+    value: '',
   };
 
   handleChange = event => {
     this.setState({ value: event.target.value });
+    console.log(this.state.value);
   };
 
   render() {
@@ -36,16 +37,16 @@ class RadioButtonsGroup extends React.Component {
         <FormControl component="fieldset" className={classes.formControl}>
           <FormLabel component="legend">{this.props.question}</FormLabel>
           <RadioGroup
-            aria-label="Gender"
-            name="gender1"
+            aria-label="CPRTest"
+            name="CPRTest"
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value="1" control={<Radio />} label={this.props.options.A} />
-            <FormControlLabel value="2" control={<Radio />} label={this.props.options.B} />
-            <FormControlLabel value="3" control={<Radio />} label={this.props.options.C} />
-            <FormControlLabel value="4" control={<Radio />} label={this.props.options.D} />
+            <FormControlLabel value="A" control={<Radio />} label={this.props.options.A} />
+            <FormControlLabel value="B" control={<Radio />} label={this.props.options.B} />
+            <FormControlLabel value="C" control={<Radio />} label={this.props.options.C} />
+            <FormControlLabel value="D" control={<Radio />} label={this.props.options.D} />
           </RadioGroup>
         </FormControl>
       </div>
