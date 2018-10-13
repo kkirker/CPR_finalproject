@@ -3,6 +3,7 @@ import styled from 'react-emotion'
 import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton';
+import Timer from '../components/testComponents/Timer'
 
 
 const TestPageWrapper = styled('div') ({
@@ -43,6 +44,13 @@ class Test extends Component {
             )
         }
     }
+    displayTimer =() =>{
+        if(this.state.showQuestions){
+            return(
+                <Timer/>
+            )
+        }
+    }
 
 
     render() {
@@ -51,9 +59,10 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
+                <Timer/>
                 <TestStartButton onClick={this.handleClick}/>
                 <button >click</button>
-                <TestContainer handleClick={this.handleClick} displayQuestions={this.displayQuestions}>
+                <TestContainer handleClick={this.handleClick} displayTime = {this.displayTimer} displayQuestions={this.displayQuestions}>
                 
                 </TestContainer>
             </TestPageWrapper>

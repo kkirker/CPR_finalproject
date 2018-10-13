@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "react-emotion";
-import NavLinks from "../menuBarComponents/NavBar/NavLinks";
-import SimpleModalWrapped from "../modal/SimpleModalWrapped";
 import Button from "../button/Button";
+
 // Styles
 const Card = styled("div")({
   backgroundColor: "#EFEFEF",
