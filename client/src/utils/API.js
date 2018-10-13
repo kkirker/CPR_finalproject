@@ -28,7 +28,7 @@ export default {
     return axios.get("/api/test/" + version)
   },
 
-  //----------- QUESTIONS-----------//
+  //----------- QUESTIONS -----------//
   createQuestion: function(testID, questionData){
     return axios.post("/api/question/" + testID, questionData);
   },

@@ -3,11 +3,13 @@ const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
   name: { type: String, required: true },
-  optionA: {type: String},
-  optionB: {type: String},
-  optionC: {type: String},
-  optionD: {type: String},
-  answer: {type: String},
+  options: {
+    1: {type: String},
+    2: {type: String},
+    3: {type: String},
+    4: {type: String},
+  },
+  answer: {type: Number},
 
 });
 
