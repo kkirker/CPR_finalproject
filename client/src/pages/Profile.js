@@ -19,3 +19,6 @@ const ProfilePage = () =>
 const authCondition = (authUser) => !!authUser;
 
 export default withAuthorization(authCondition)(ProfilePage);
+
+
+//User authUser.uid to get the Firebase ID to then make an API call to get the rest of the user data
