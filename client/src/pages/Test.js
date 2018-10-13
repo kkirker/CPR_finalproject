@@ -20,6 +20,7 @@ class Test extends Component {
         this.state = {
           version: 1,
           showQuestions: false,
+          
         };
         this.handleClick = this.handleClick.bind(this);
       }
@@ -31,9 +32,11 @@ class Test extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        this.setState(state => ({
+        console.log('foo');
+        
+        this.setState({
             showQuestions: true
-        }));
+        });
         console.log(this.state.showQuestions);
     }
 
@@ -44,13 +47,7 @@ class Test extends Component {
             )
         }
     }
-    displayTimer =() =>{
-        if(this.state.showQuestions){
-            return(
-                <Timer/>
-            )
-        }
-    }
+    
 
 
     render() {
@@ -59,10 +56,10 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-                <Timer/>
-                <TestStartButton onClick={this.handleClick}/>
+                <Timer display={this.state.showQuestions}/>
+                <TestStartButton handleClick={this.handleClick}/>
                 <button >click</button>
-                <TestContainer handleClick={this.handleClick} displayTime = {this.displayTimer} displayQuestions={this.displayQuestions}>
+                <TestContainer handleClick={this.handleClick}  displayQuestions={this.displayQuestions}>
                 
                 </TestContainer>
             </TestPageWrapper>

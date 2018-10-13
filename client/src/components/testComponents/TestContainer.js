@@ -28,7 +28,7 @@ const TestContainer = (props) => {
                 <h1>CPR Test</h1>
                 {/* <TestStartButton onClick={props.handleClick}/> */}
             <QuestionsStyle>
-                {/* { props.displayQuestions } */}
+                { props.displayQuestions }
             </QuestionsStyle>
         </TestContainerStyle>
         )

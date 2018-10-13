@@ -68,7 +68,7 @@ function TestStartButton(props) {
   return (
     <div className={classes.container}>
       <MuiThemeProvider theme={theme}>
-        <Button variant="contained" color="primary" className={classes.margin}>
+        <Button variant="contained" color="primary" className={classes.margin} onClick={props.handleClick}>
           Start Test
         </Button>
       </MuiThemeProvider>
