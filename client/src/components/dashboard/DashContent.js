@@ -53,7 +53,7 @@ const DashContent = () => (
       <Card>
         <LinkWrapper>
           <Button color="Primary" href="/test" Name="Take the Test" />
-          <Button color="Secondary" href="/score" Name="Check your Score" />
+          <Button color="Secondary" href="/results" Name="Check your Score" />
         </LinkWrapper>
         <TextHolder>
           If you wish to complete the Test or see what your current results look
