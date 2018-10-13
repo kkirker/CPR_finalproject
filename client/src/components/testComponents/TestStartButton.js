@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
-
 const styles = theme => ({
   container: {
     display: 'flex',
@@ -68,7 +67,7 @@ function TestStartButton(props) {
   return (
     <div className={classes.container}>
       <MuiThemeProvider theme={theme}>
-        <Button variant="contained" color="primary" className={classes.margin} onClick={props.handleClick}>
+        <Button variant="contained" onClick={props.handleClick} color="primary" className={classes.margin}>
           Start Test
         </Button>
       </MuiThemeProvider>

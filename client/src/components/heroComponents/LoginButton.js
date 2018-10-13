@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   button: {
@@ -23,9 +24,11 @@ function LoginButton(props) {
   const { classes } = props;
   return (
       <MainButtonStyle>
+        <Link to='/signup'>
           <Button variant="contained" color="secondary" className={classes.button}>
-          Register Today
-        </Button>
+            Register Today
+          </Button>
+        </Link>
       </MainButtonStyle>
   );
 }

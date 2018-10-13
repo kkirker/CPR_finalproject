@@ -12,8 +12,8 @@ class Question extends Component {
         super(props);
 
         this.state = {
-            UserAnswer: 1,
-            QuestionAnswer: 1,
+            // UserAnswer: [],
+            // QuestionAnswer: [props.answer],
         };
     }
 
@@ -23,9 +23,13 @@ class Question extends Component {
 
         return(
             <QuestionWrapper>
-                <RadioButtonsGroup/>
-                <Dividers/>
-                <RadioButtonsGroup/>
+                <RadioButtonsGroup           
+                    key={this.props.key}
+                    id={this.props.id}
+                    question={this.props.question}
+                    options={this.props.options}
+                    answer={this.props.answer}
+                />
                 <Dividers/>
             </QuestionWrapper>
         );

@@ -4,12 +4,19 @@ import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton';
 import Timer from '../components/testComponents/Timer'
-
+import CPRTest from '../CPRTest.json'
 
 const TestPageWrapper = styled('div') ({
     backgroundColor: '#A9A9A9',
     width: '100%',
-    height: '1000px',
+    minHeight: '100vh;',
+    height: '100%',
+})
+
+const TestButtonWrapper = styled('div') ({
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '50px',
 })
 
 class Test extends Component {
@@ -20,7 +27,10 @@ class Test extends Component {
         this.state = {
           version: 1,
           showQuestions: false,
-          
+          CPRTest,
+          AnswersObj: {
+              
+          }
         };
         this.handleClick = this.handleClick.bind(this);
       }
@@ -38,14 +48,14 @@ class Test extends Component {
             showQuestions: true
         });
         console.log(this.state.showQuestions);
+        this.displayQuestions();
     }
 
     displayQuestions = () => {
-        if(this.state.showQuestions) {
             return(
                 <Question/>
             )
-        }
+        
     }
     
 
@@ -56,12 +66,12 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
+                {/* <Timer/> */}
                 <Timer display={this.state.showQuestions}/>
-                <TestStartButton handleClick={this.handleClick}/>
-                <button >click</button>
-                <TestContainer handleClick={this.handleClick}  displayQuestions={this.displayQuestions}>
-                
-                </TestContainer>
+                <TestContainer displayQuestions={this.state.showQuestions && <Question />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
+                <TestButtonWrapper>
+                    <TestStartButton handleClick={this.handleClick}/>
+                </TestButtonWrapper>
             </TestPageWrapper>
 
         );
