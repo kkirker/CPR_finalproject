@@ -18,6 +18,7 @@ import SignInPage from './pages/UserLoginPages/SignIn';
 import PasswordForgetPage from './pages/UserLoginPages/PasswordForget';
 import * as routes from './constants/routes';
 import withAuthentication from './components/userLoginComponents/withAuthentication';
+import Footer from './components/footerComponents/Footer'
 
 
 
@@ -36,7 +37,6 @@ class App extends Component {
           <div>
 
             <Navigation />
-            <hr/>
             <Route exact path={routes.LANDING} component={Landing} />
             <Route exact path={routes.SIGN_UP} component={SignUpPage} />
             <Route exact path={routes.SIGN_IN} component={SignInPage} />
@@ -46,7 +46,7 @@ class App extends Component {
             <Route exact path={routes.TEST} component={Test}/>
             <Route exact path={routes.RESULTS} component={Results}/>
           </div>
-          
+          <Footer/>
           </Content>
       </Router>
     );

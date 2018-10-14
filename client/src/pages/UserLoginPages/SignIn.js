@@ -6,6 +6,12 @@ import { PasswordForgetLink } from './PasswordForget';
 
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
+import styled from 'react-emotion'
+
+const StyledInput = styled('input')({
+  margin: '15px',
+  display: 'block',
+})
 
 const SignInPage = ({ history }) =>
   <div>
@@ -67,13 +73,13 @@ class SignInForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
+        <StyledInput
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
-        <input
+        <StyledInput
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
           type="password"
