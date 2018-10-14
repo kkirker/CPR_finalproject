@@ -7,6 +7,7 @@ import * as routes from '../../constants/routes';
 import SignInButton from './SignInButton';
 import SignOutButton from './SignOutButton';
 import { auth } from '../../firebase';
+import Logo from '../logoComponents/logo'
 
 
 
@@ -15,23 +16,34 @@ const NavBarStyling = styled('div')({
   height: '10vh',
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'flex-end',
+  justifyContent: 'space-between',
   alignItems: 'center',
-  backgroundColor: '#ffffff',
+  backgroundColor: '#FF3B3F',
 })
 
 const RowStyling = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
 })
 
 const NavItem = styled('div')({
-  padding: '1vh'
+  padding: '1vh',
 
 })
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    &:hover {
+      color: #CAEBF2;
+    }
+    &:focus, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
 
 const Navigation = () =>
 <NavBarStyling>
@@ -53,10 +65,13 @@ const Navigation = () =>
   // </ul>
 
   <RowStyling>
-    <NavItem><Link to={routes.LANDING}>Home</Link></NavItem>
-    <NavItem><Link to={routes.PROFILE}>Profile</Link></NavItem>
+    <Logo />
+    <NavItem><StyledLink to={routes.LANDING}>Home</StyledLink></NavItem>
+    <NavItem><StyledLink to={routes.PROFILE}>Profile</StyledLink></NavItem>
+    <NavItem><StyledLink to={routes.DASHBOARD}>Dashboard</StyledLink></NavItem>
     <NavItem><SignOutButton/></NavItem>
   </RowStyling>
+  
 
 
 
@@ -70,8 +85,9 @@ const Navigation = () =>
   // </ul>
 
   <RowStyling>
-    <div><Link to={routes.LANDING}>Home</Link></div>
-    <div><SignInButton/></div>
+    <Logo />
+    <NavItem><StyledLink to={routes.LANDING}>Home</StyledLink></NavItem>
+    <NavItem><SignInButton/></NavItem>
   </RowStyling>
 
 export default Navigation;

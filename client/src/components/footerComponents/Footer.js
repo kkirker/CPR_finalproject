@@ -6,10 +6,10 @@ import styled from 'react-emotion'
 const MenuBarStyling = styled('div')({
   width: '100%',
   height: '10vh',
-  display: 'flex',
-  justifyContent: 'flex-end',
-  alignItems: 'center',
   backgroundColor: '#CAEBF2',
+  textAlign: 'center',
+  marginTop: '6vh',
+  padding: '20px'
 })
 
 
@@ -17,6 +17,7 @@ const MenuBarStyling = styled('div')({
 const Footer = () => {
   return (
     <MenuBarStyling>
+      <p>Copyright ©1993 - 2018 - American CPR - All rights reserved.</p>
     </MenuBarStyling>
   )
 }

@@ -1,9 +1,7 @@
 import React , { Component } from 'react'
 import styled from 'react-emotion'
 import Hero from '../components/heroComponents/Hero'
-import MenuBar from '../components/menuBarComponents/MenuBar'
 import UnderHero1 from '../components/landingComponentsExtra/UnderHero1'
-import Footer from '../components/footerComponents/Footer'
 import MenuBarSpacing from '../components/menuBarComponents/MenuSpacing'
 
 
@@ -20,12 +18,10 @@ class About extends Component {
 
     return(
       <LandPageWrapper>
-        {/* <MenuBar/> */}
-        {/* <MenuBarSpacing/>   */}
+        <MenuBarSpacing/> 
           <Hero cpr={cpr} landingText={landingText} smallerText={smallerText}>
           </Hero>
         <UnderHero1/>
-        <Footer/>
     </LandPageWrapper>
     );
   }

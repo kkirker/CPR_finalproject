@@ -6,6 +6,16 @@ import {
 import { auth } from '../../firebase';
 import * as routes from '../../constants/routes';
 import API from "../../utils/API";
+import styled from 'react-emotion'
+
+const StyledInput = styled('input')({
+  margin: '15px',
+  display: 'block',
+})
+
+
+
+
 
 const SignUpPage = ({ history }) =>
   <div>
@@ -102,31 +112,31 @@ class SignUpForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-      <input
+      <StyledInput
           value={firstname}
           onChange={event => this.setState(byPropKey('firstname', event.target.value))}
           type="text"
           placeholder="First Name"
         />
-         <input
+         <StyledInput
           value={lastname}
           onChange={event => this.setState(byPropKey('lastname', event.target.value))}
           type="text"
           placeholder="Last Name"
         />
-        <input
+        <StyledInput
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
-        <input
+        <StyledInput
           value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
           type="password"
           placeholder="Password"
         />
-        <input
+        <StyledInput
           value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
           type="password"
