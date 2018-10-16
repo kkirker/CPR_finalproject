@@ -28,7 +28,6 @@ const INITIAL_STATE = {
   fbUserID: '',
   firstname: '',
   lastname: '',
-  username: '',
   email: '',
   passwordOne: '',
   passwordTwo: '',
@@ -51,7 +50,6 @@ class SignUpForm extends Component {
       fbUserID,
       firstname,
       lastname,
-      username,
       email,
       passwordOne,
     } = this.state;
@@ -74,7 +72,7 @@ class SignUpForm extends Component {
           })
           .then( () => {
             this.setState({ ...INITIAL_STATE });
-            history.push(routes.HOME);
+            history.push(routes.DASHBOARD);
           })
           .catch(error => {
             this.setState(byPropKey('error', error));
@@ -97,7 +95,6 @@ class SignUpForm extends Component {
     const {
       firstname,
       lastname,
-      username,
       email,
       passwordOne,
       passwordTwo,
@@ -105,10 +102,11 @@ class SignUpForm extends Component {
     } = this.state;
 
     const isInvalid =
+    firstname === '' ||
+    lastname === '' ||
     passwordOne !== passwordTwo ||
     passwordOne === '' ||
-    email === '' ||
-    username === '';
+    email === '';
 
     return (
       <form onSubmit={this.onSubmit}>
