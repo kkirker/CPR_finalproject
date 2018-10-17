@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "react-emotion";
 import Button from "../button/Button";
+import Iframe from "react-iframe";
 
 // Styles
 const Card = styled("div")({
@@ -14,8 +15,9 @@ const Card = styled("div")({
 });
 
 const Container = styled("div")({
-  width: "90%",
-  backgroundColor: "#CAEBF2",
+  width: "100%",
+  height: "100vh",
+  backgroundColor: "#A9A9A9",
   padding: "20",
   boxShadow: "0 0 2 2 rgba(0,0,0,0.4)",
   flexDirection: "row",
@@ -24,9 +26,11 @@ const Container = styled("div")({
 });
 
 const LinkWrapper = styled("div")({
-  flex: "1",
-  flexDirection: "column",
-  justifyContent: "spaceBetween"
+  flexDirection: "row",
+  display: "flex",
+  alignItems: "center",
+  textAlign: "center",
+  justifyContent:"center"
 });
 
 const ContentHolder = styled("div")({
@@ -34,44 +38,67 @@ const ContentHolder = styled("div")({
   flex: "2"
 });
 
-const TextHolder = styled("div")({
-  flex: "2",
-  textAlign: "center",
-  display: "flex",
-  margin: "auto"
-});
+// const TextHolder = styled("div")({
+//   fontFamily= "'Niramit', sans-serif",
+//   fontSize= "24px"
+// });
+
+const Iframes = styled(Iframe)({
+  margin:"0 auto"
+})
+
+const centerButton ={
+  justifyContent: "space-evenly"
+}
+
 
 const DashContent = () => (
   <Container>
     {/* <NavLinks /> */}
     <ContentHolder>
-      <Card>
-        Welcome to Still Alive. This webpage was developed to help you pass your
-        written CPR test. You can take the tests, check your scores, update your
-        profile, or even look up more resources on CPR.
-      </Card>
-      <Card>
+      {/* <Card>
+        <h4>
+        You can take the tests, check your scores, update your
+        profile, or even look up more resources on CPR and for written exam.
+
+        </h4>
+      </Card> */}
+      <Card style = {centerButton}>
         <LinkWrapper>
           <Button color="Primary" href="/test" Name="Take the Test" />
           <Button color="Secondary" href="/results" Name="Check your Score" />
         </LinkWrapper>
-        <TextHolder>
+        {/*<TextHolder>
           If you wish to complete the Test or see what your current results look
           like. Please click on the two links to the left.
-        </TextHolder>
+        </TextHolder> */}
       </Card>
-      <Card>
+      <Card style = {centerButton}>
         <div>
+        <Button
+          className="centerAlign"
+          color="Primary"
+          href="/profile"
+          Name="Enter Profile Pages"
+        />
+        </div>
+        {/* <div>
           If you wish to update your profile to include more information, please
           click on the link to the right?
         </div>
         <LinkWrapper>
-          <Button color="Primary" href="/profile" Name="Enter Profile Pages" />
-        </LinkWrapper>
+        </LinkWrapper> */}
       </Card>
       <Card>
-        All remaining extra resources can be found here{" "}
-        <Link to="/resources">Link</Link>
+        <Iframes
+          url="https://indd.adobe.com/view/9b04477d-e3ec-4fbd-9a55-043797a3c9a9"
+          height="95vh"
+          id="myId"
+          className="centerAlign"
+          display="initial"
+          position="relative"
+          width="80vw"
+        />
       </Card>
     </ContentHolder>
   </Container>
