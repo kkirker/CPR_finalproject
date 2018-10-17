@@ -16,6 +16,7 @@ const QuestionsStyle = styled('div') ({
     border: '0 0 2px 2px',
     borderStyle: 'solid',
     borderColor: 'rgb(255, 59, 63)',
+    borderRadius: '25px',
     flexDirection: 'column',
     backgroundColor: 'rgb(239, 239, 239)',
 })

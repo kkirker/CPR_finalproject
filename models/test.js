@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const testSchema = new Schema({
   version: { type: String, required: true },
   questions: [
-    {
-      // Store ObjectIds in the array
-      type: Schema.Types.ObjectId,
-      // The ObjectIds will refer to the ids in the Question model
-      ref: "Question"
-    }
+    // {
+    //   // Store ObjectIds in the array
+    //   // type: Schema.Types.ObjectId,
+    //   // // The ObjectIds will refer to the ids in the Question model
+    //   // ref: "Question"
+    // }
   ]
 
 });
