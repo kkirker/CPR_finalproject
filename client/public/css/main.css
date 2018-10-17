@@ -1,0 +1,205 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+  }
+
+.nav {
+    border-bottom:  12px solid #3a55b1;
+}
+
+.wrapper {
+    min-height: calc(100vh - 70px);
+}
+
+.footer {
+    font-size: 1rem;
+    height: 8vh;
+    text-align:center;
+    padding: 10px;
+    border-top:  12px solid #FF3B3F;
+        -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+/******************* LANDING PAGE *********************/
+
+.image-l {
+    float: left; 
+    margin-right: 20px; 
+    margin-bottom: 15px;
+    max-width: 50%; 
+}
+
+.image-r {
+    max-width: 50%; 
+    height: auto; 
+    float: right; 
+    margin-left: 20px;
+}
+
+.red-h1 {
+    color: #FF3B3F;
+}
+
+.cpr-training {
+    margin-bottom: 25px;
+}
+
+.save-a-life {
+    border-top: 1px solid #ededed; 
+    border-bottom: 1px solid #ededed; 
+    margin: 5px 0 50px 0; 
+    padding: 15px 0 15px 0;
+}
+
+.hero-text {
+    position: absolute;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    animation: fadein 3s ease;
+    background-color: #3a55b1;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(58, 85, 177, 0.4);
+
+}
+
+/******************* END LANDING PAGE *********************/
+
+/******************* SIGN IN PAGE *********************/
+
+.sign-in-container {
+    margin: 30px auto;
+    max-width: 960px;
+
+}
+
+.mod-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.signin-h1 {
+    color: #FF3B3F;
+    border-bottom: 1px solid #ededed; 
+}
+
+.login-container {
+    border: 1px solid #ddd;
+    margin: 28px 0;
+    padding: 22px 25px 12px 33px;
+}
+
+.sign-up-container {
+    border: 1px solid #ddd;
+    margin: 28px 0;
+    padding: 22px 25px 12px 33px;
+
+}
+
+.form-instructions {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 13px;
+    color: #a0a0a0;
+}
+
+.required {
+    margin-bottom: 5px;
+    float: right;
+    font-size: 12px;
+    margin: 5px 0 0;
+    color: #df280a;
+}
+
+
+/******************* END SIGN IN PAGE *********************/
+
+/******************* SIGN UP PAGE *********************/
+
+.sign-up-page-container {
+    margin: 30px auto;
+    max-width: 960px;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    margin: 28px 0;
+    padding: 22px 25px 12px 33px;
+}
+
+
+/******************* END SIGN UP PAGE *********************/
+
+
+/******************* FORGOT PASSWORD PAGE *********************/
+
+.password-page-container {
+    margin: 30px auto;
+    max-width: 960px;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    margin: 28px 0;
+    padding: 22px 25px 12px 33px;
+}
+
+
+/******************* END FORGOT PASSWORD PAGE *********************/
+
+
+/******************* PROFILE PAGE *********************/
+
+.profile-page-container {
+    margin: 30px auto;
+    max-width: 960px;
+}
+
+.form-container {
+    border: 1px solid #ddd;
+    margin: 28px 0;
+    padding: 22px 25px 12px 33px;
+}
+
+
+/******************* END PROFILE PAGE *********************/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .footer {
+        font-size: 10px;
+        }
+    
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .footer {
+        font-size: 12px;
+        }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+

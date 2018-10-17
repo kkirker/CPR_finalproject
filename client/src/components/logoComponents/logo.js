@@ -14,7 +14,7 @@ const Logo = () => {
   return (
     <LogoWrapper>
       <Link to={routes.LANDING}>
-        <img src='/images/ACPR_Logo_200x60.png'/>
+        <img src='/images/ACT_logo-white.png'/>
       </Link>  
     </LogoWrapper>
   )
