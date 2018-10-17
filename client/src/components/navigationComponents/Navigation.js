@@ -46,7 +46,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Navigation = () =>
-<NavBarStyling>
+<NavBarStyling className='nav'>
   <AuthUserContext.Consumer>
     {authUser => authUser
       ? <NavigationAuth />
@@ -66,7 +66,6 @@ const Navigation = () =>
 
   <RowStyling>
     <Logo />
-    <NavItem><StyledLink to={routes.LANDING}>Home</StyledLink></NavItem>
     <NavItem><StyledLink to={routes.PROFILE}>Profile</StyledLink></NavItem>
     <NavItem><StyledLink to={routes.DASHBOARD}>Dashboard</StyledLink></NavItem>
     <NavItem><SignOutButton/></NavItem>
@@ -86,7 +85,6 @@ const Navigation = () =>
     
   <RowStyling>
     <Logo />
-    <NavItem><StyledLink to={routes.LANDING}>Home</StyledLink></NavItem>
     <NavItem><SignInButton/></NavItem>
   </RowStyling>
 

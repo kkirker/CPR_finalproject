@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 
 import { auth } from '../../firebase';
+import styled from 'react-emotion'
+import Button from '@material-ui/core/Button';
+
+const StyledInput = styled('input')({
+  display: 'block',
+  marginBottom: '10px',
+  width: '365px',
+  maxWidth: '100%',
+  borderRadius: '2px',
+  border: '1px solid silver',
+  background: '#FFFFFF',
+  fontSize: '15px',
+  padding: '4px'
+})
+
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -46,21 +61,23 @@ class PasswordChangeForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
+      <label for="new-password">New Password *</label><br />
+        <StyledInput
           value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
           type="password"
           placeholder="New Password"
         />
-        <input
+        <label for="confirm-new-password">Confirm New Password *</label><br />
+        <StyledInput
           value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
           type="password"
           placeholder="Confirm New Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <Button disabled={isInvalid} type="submit" variant="contained" color="secondary">
           Reset My Password
-        </button>
+        </Button>
 
         { error && <p>{error.message}</p> }
       </form>

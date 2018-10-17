@@ -10,9 +10,9 @@ const LandPageWrapper = styled('div')({
 class About extends Component {
 
   render() {
-    let cpr = 'CPR';
-    let landingText = 'ONLINE TEST';
-    let smallerText = 'Save a life, Motherfucker';
+    let cpr = '½ the Time, ½ the Price, and TWICE the Fun!™';
+    let landingText = 'WELCOME';
+    let smallerText = 'Save a Life A.C.T. Now!';
 
     return(
       <LandPageWrapper>

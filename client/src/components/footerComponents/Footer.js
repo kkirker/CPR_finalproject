@@ -4,20 +4,19 @@ import styled from 'react-emotion'
 
 
 const MenuBarStyling = styled('div')({
-  width: '100%',
-  height: '10vh',
-  backgroundColor: '#CAEBF2',
-  textAlign: 'center',
-  marginTop: '6vh',
-  padding: '20px'
+  height: '8vh',
+  backgroundColor: '#A9A9A9',
+  color: '#FFFFFF'
 })
 
 
 
 const Footer = () => {
   return (
-    <MenuBarStyling>
-      <p>Copyright ©1993 - 2018 - American CPR - All rights reserved.</p>
+    <MenuBarStyling className='footer'>
+      <p>American CPR.com | 760-944-9755 | Hours: 8AM – 5PM PT | 565 Westlake St., Suite 100 Encinitas, CA 92024<br />
+      Copyright ©1993 - 2018 - American CPR - All rights reserved.
+      </p>
     </MenuBarStyling>
   )
 }

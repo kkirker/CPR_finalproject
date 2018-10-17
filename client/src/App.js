@@ -34,8 +34,7 @@ class App extends Component {
     return (
       <Router>
           <Content>
-          <div>
-
+          <div className='wrapper'>
             <Navigation />
             <Route exact path={routes.LANDING} component={Landing} />
             <Route exact path={routes.SIGN_UP} component={SignUpPage} />

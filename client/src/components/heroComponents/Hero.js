@@ -9,8 +9,8 @@ const HeroWrapper = styled('div')({
 
 const HeroImage = styled('div')({
   width: '100%',
-  height: '850px',
-  backgroundImage: "url('https://images.unsplash.com/photo-1533026080863-c503c50220af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=378d37d0a8694ddc8a854bc36a279079&auto=format&fit=crop&w=1630&q=80')",
+  height: '700px',
+  backgroundImage: "url('./images/hero-image.jpg')",
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   display: 'flex',
@@ -30,23 +30,27 @@ const AltText = styled('h3')({
 
 })
 
+const Welcome = styled('h1')({
+  color: 'white',
+  textAlign: 'center',
+  fontSize: '72px'
 
-
-
+})
 
 
 const Hero = (props) => {
   return (
     <HeroWrapper>
       <HeroImage>
-          <LandText>
-              <h1>{props.cpr}</h1>
+          <LandText className='hero-text'>
+          <Welcome>{props.landingText}</Welcome>
+          <AltText>American CPR Training Online Testing</AltText>
+              {props.cpr}
               <AltText>
-              <h1>{props.landingText}</h1>
               {props.smallerText}
               </AltText>
+              <LoginButton/>
           </LandText>
-          <LoginButton/>
       </HeroImage>
     </HeroWrapper>
   )

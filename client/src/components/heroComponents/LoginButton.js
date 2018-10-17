@@ -15,7 +15,6 @@ const styles = theme => ({
 });
 
 const MainButtonStyle = styled('div')({
-  display: 'flex',
   height: '50px;',
   
 })
