@@ -68,7 +68,7 @@ class SignUpForm extends Component {
             lastName: lastname,
             email: email,
             score: 0,
-            textVersion: '1.0'
+            testVersion: '1'
           })
           .then( () => {
             this.setState({ ...INITIAL_STATE });

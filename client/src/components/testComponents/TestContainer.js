@@ -34,21 +34,23 @@ const TestContainer = (props) => {
         <TestContainerStyle>
                 <h1>CPR Test</h1>
             <QuestionsStyle>
+                
                 {/* {console.log(props)} */}
-            {props.displayQuestions? props.CPRTest.map(question => (
+            {props.displayQuestions? props.questions.map(question => (
                 <Question 
                     key={question.id}
-                    id={question.id}
+                    id={question.questionID}
                     question={question.question}
                     options={question.options}
                     answer={question.answer}
+                    updateUserAnswer={props.updateUserAnswer}
                 />
 
                 
             )): null}
             </QuestionsStyle>
             <TestSubmitButtonStyle>
-            {props.displayQuestions ? <TestSubmitButton/>:null}
+            {props.displayQuestions ? <TestSubmitButton handleSubmit={props.handleSubmit}/>:null}
             </TestSubmitButtonStyle>
         </TestContainerStyle>
         )
