@@ -62,17 +62,17 @@ const theme = createMuiTheme({
   },
 });
 
-function TestSubmitButton(props) {
+function TestSubmitButton(props,) {
   const { classes } = props;
 
   return (
     <div className={classes.container}>
       <MuiThemeProvider theme={theme}>
-      <Link to='/results'>
-            <Button variant="contained" onClick={props.submitClick} color="primary" className={classes.margin}>
+      {/* <Link to='/results'> */}
+            <Button variant="contained" onClick={props.handleSubmit} color="primary" className={classes.margin}>
             Submit Answers
             </Button>
-        </Link>
+        {/* </Link> */}
       </MuiThemeProvider>
     </div>
   );

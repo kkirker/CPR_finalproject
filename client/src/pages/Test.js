@@ -29,18 +29,14 @@ class Test extends Component {
     constructor(props) {
 
         API.getTest("1").then((results) => {
-            console.log(results);
+            this.setState({ questions: results.data.questions });
         });
 
         super(props);
     
         this.state = {
           showQuestions: false,
-          CPRTest: '',
-          AnswersObj: {
-              
-          },
-          
+          questions: []
         };
         this.handleClick = this.handleClick.bind(this);
       }
@@ -49,6 +45,18 @@ class Test extends Component {
         console.log(this.state);
     }
     
+    updateUserAnswer = (questionId, userAnswer) => {
+        debugger
+        const questionsWithUserAnswer = this.state.questions.map(question => {
+            if (question.questionID === questionId) {
+                return Object.assign({}, question, { userAnswer })
+            }
+            return question
+        })
+
+        this.setState({ questions: questionsWithUserAnswer })
+        console.log(questionsWithUserAnswer)
+    }
 
 
     handleClick = (e) => {
@@ -65,6 +73,13 @@ class Test extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        console.log('submitted');
+
+    }
+
+    getUserAnswers = () => {
+        console.log('answer changed');
+
     }
 
     displayQuestions = () => {
@@ -76,7 +91,7 @@ class Test extends Component {
 
     displaySubmitButton = () => {
         return(
-            <TestSubmitButton/>
+            <TestSubmitButton handleSubmit={this.handleSubmit}/>
         )
     
 }
@@ -90,7 +105,29 @@ class Test extends Component {
         return(
             <TestPageWrapper>
                 {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
-                <TestContainer displayQuestions={this.state.showQuestions && <Question />} displaySubmitButton={this.state.showQuestions && <TestSubmitButton />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
+                <TestContainer displayQuestions={this.state.showQuestions && <Question />}
+                                handleSubmit={this.handleSubmit}
+                                updateUserAnswer={this.updateUserAnswer}
+                                displaySubmitButton={this.state.showQuestions && <TestSubmitButton 
+                                />} 
+                                
+                                questions={this.state.questions}
+                                displayTime = {this.displayTimer}/>
+                                {/* {this.state.displayQuestions? this.state.CPRTest.data.questions.map(question => (
+                                    this.state.QuestionsObj.push(
+                                    <Question 
+                                        key={question.id}
+                                        id={question.id}
+                                        question={question.question}
+                                        options={question.options}
+                                        answer={question.answer}
+                                        getUserAnswers={this.getUserAnswers}
+
+                                    />
+
+                                    
+                                ))): null} */}
+                                {/* </TestContainer> */}
                 <TestButtonWrapper >
                     <TestStartButton handleClick={this.handleClick}/>
                 </TestButtonWrapper>

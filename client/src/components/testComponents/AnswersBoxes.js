@@ -20,6 +20,7 @@ const styles = theme => ({
 });
 
 const INITIAL_STATE = {
+  question: '',
   value : '',
 };
 
@@ -32,9 +33,14 @@ class RadioButtonsGroup extends React.Component {
   }
   };
 
+  componentDidMount(props) {
+    this.setState({question: this.props.question})
+  }
+
   handleChange = event => {
     this.setState({ value: event.target.value }, () => {
       console.log(this.state.value);
+      this.props.updateUserAnswer(this.props.id, this.state.value);
     });
   };
 
@@ -44,7 +50,7 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
-          <FormLabel component="legend">{this.props.question}</FormLabel>
+          <FormLabel component="legend" question={this.props.question}>{this.props.question}</FormLabel>
           <RadioGroup
             aria-label="CPRTest"
             name="CPRTest"

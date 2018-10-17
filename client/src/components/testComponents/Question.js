@@ -29,6 +29,7 @@ class Question extends Component {
                     question={this.props.question}
                     options={this.props.options}
                     answer={this.props.answer}
+                    updateUserAnswer={this.props.updateUserAnswer}
                 />
                 <Dividers/>
             </QuestionWrapper>
