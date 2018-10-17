@@ -19,14 +19,23 @@ const styles = theme => ({
   },
 });
 
+const INITIAL_STATE = {
+  value : '',
+};
+
 class RadioButtonsGroup extends React.Component {
-  state = {
-    value: '',
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      ...INITIAL_STATE,
+  }
   };
 
   handleChange = event => {
-    this.setState({ value: event.target.value });
-    console.log(this.state.value);
+    this.setState({ value: event.target.value }, () => {
+      console.log(this.state.value);
+    });
   };
 
   render() {

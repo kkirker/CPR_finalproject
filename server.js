@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/cpr_final_project";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/CPRDB";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB

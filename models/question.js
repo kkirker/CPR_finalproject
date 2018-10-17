@@ -2,16 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const questionSchema = new Schema({
-  name: { type: String, required: true },
+  id: {type: String, required: true},
+  question: { type: String, required: true },
   options: {
-    1: {type: String},
-    2: {type: String},
-    3: {type: String},
-    4: {type: String},
+    "A": {type: String},
+    "B": {type: String},
+    "C": {type: String},
+    "D": {type: String},
   },
-  answer: {type: Number},
-
-});
+  answer: {type: String},
+ 
+ });
 
 const Question = mongoose.model("Question", questionSchema);
 

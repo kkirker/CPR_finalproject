@@ -4,7 +4,8 @@ import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
 import Timer from '../components/testComponents/Timer'
-import CPRTest from '../CPRTest.json'
+// import CPRTest from '../CPRTest.json'
+import API from '../utils/API'
 import TestSubmitButton from '../components/testComponents/TestSubmitButton'
 
 const TestPageWrapper = styled('div') ({
@@ -21,15 +22,21 @@ const TestButtonWrapper = styled('div') ({
     padding: '50px',
 })
 
+
+
 class Test extends Component {
 
     constructor(props) {
+
+        API.getTest("1").then((results) => {
+            console.log(results);
+        });
+
         super(props);
     
         this.state = {
-          version: 1,
           showQuestions: false,
-          CPRTest,
+          CPRTest: '',
           AnswersObj: {
               
           },
@@ -41,6 +48,7 @@ class Test extends Component {
     componentDidUpdate() {
         console.log(this.state);
     }
+    
 
 
     handleClick = (e) => {
@@ -81,7 +89,7 @@ class Test extends Component {
 
         return(
             <TestPageWrapper>
-                <Timer display={this.state.showQuestions} props = {this.props}/>
+                {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
                 <TestContainer displayQuestions={this.state.showQuestions && <Question />} displaySubmitButton={this.state.showQuestions && <TestSubmitButton />} CPRTest={this.state.CPRTest} displayTime = {this.displayTimer}/>
                 <TestButtonWrapper >
                     <TestStartButton handleClick={this.handleClick}/>
