@@ -14,7 +14,7 @@ export default {
   },
 
   getUser: function(userEmail){
-    return axios.get("/api/user" + userEmail);
+    return axios.get("/api/user/" + userEmail);
   },
 
   //----------- TESTS-----------//
