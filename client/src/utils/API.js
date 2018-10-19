@@ -9,12 +9,12 @@ export default {
     return axios.post("/api/user", userData);
   },
 
-  updateUser: function(fbUserID, userData){
-    return axios.put("/api/user/" + fbUserID, userData);
+  updateUser: function(userEmail, userData){
+    return axios.put("/api/user/" + userEmail, userData);
   },
 
-  getUser: function(fbUserID){
-    return axios.get("/api/user" + fbUserID);
+  getUser: function(userEmail){
+    return axios.get("/api/user" + userEmail);
   },
 
   //----------- TESTS-----------//
