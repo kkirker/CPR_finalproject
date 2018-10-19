@@ -46,7 +46,7 @@ class Test extends Component {
     }
     
     updateUserAnswer = (questionId, userAnswer) => {
-        debugger
+        // debugger
         const questionsWithUserAnswer = this.state.questions.map(question => {
             if (question.questionID === questionId) {
                 return Object.assign({}, question, { userAnswer })
@@ -73,7 +73,21 @@ class Test extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submitted');
+        let userAnswers = [];
+        let testAnswers = [];
+        //gets all user answers from questions object
+        userAnswers = this.state.questions.map(question => {
+            // userAnswers.push(question.userAnswer);
+            return question.userAnswer
+        });
+        console.log(userAnswers);
+        //gets all correct answers from questions object
+        testAnswers = this.state.questions.map(question => {
+            return question.answer
+        });
+        console.log(testAnswers);
+        
+
 
     }
 
