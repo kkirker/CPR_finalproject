@@ -17,16 +17,16 @@ router.post("/user", (req, res) => {
 
 //----------- UPDATE USER ------------//
 //Use the FireBase user ID that is available throughout the app of the logged in user to find the user and update them
-router.put("/user/:fbUserID", function(req, res) {
+router.put("/user/:userEmail", function(req, res) {
     db.User
-    .findOneAndUpdate({ fbUserID: req.params.fbUserID }, req.body)
-    .then(dbModel => res.json(dbModel))
+    .findOneAndUpdate({ email: req.params.userEmail }, req.body, { new: true} )
+    .then(dbModel => {res.json(dbModel)})
     .catch(err => res.json(err));
 })
 
 //----------- GET A USER -------------//
-router.get("/user/:fbUserID", (req, res) => {
-    db.User.findOne({ fbUserID: req.params.fbUserID })
+router.get("/user/:userEmail", (req, res) => {
+    db.User.findOne({ email: req.params.userEmail })
     .then(user => res.json(user))
     .catch(err => res.json(err));
 })
