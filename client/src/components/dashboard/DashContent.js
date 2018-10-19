@@ -14,9 +14,11 @@ const Card = styled("div")({
   borderRadius: "5px"
 });
 
+
+
 const Container = styled("div")({
   width: "100%",
-  height: "100vh",
+  height: "100%",
   backgroundColor: "#A9A9A9",
   padding: "20",
   boxShadow: "0 0 2 2 rgba(0,0,0,0.4)",
@@ -35,7 +37,8 @@ const LinkWrapper = styled("div")({
 
 const ContentHolder = styled("div")({
   width: "90vw",
-  flex: "2"
+  flex: "2",
+  height : "100%"
 });
 
 // const TextHolder = styled("div")({
@@ -50,7 +53,14 @@ const Iframes = styled(Iframe)({
 const centerButton ={
   justifyContent: "space-evenly"
 }
+ 
+const uniqueButton={
 
+}
+
+const iframeCard={
+  height: "100vh"
+}
 
 const DashContent = () => (
   <Container>
@@ -65,8 +75,8 @@ const DashContent = () => (
       </Card> */}
       <Card style = {centerButton}>
         <LinkWrapper>
-          <Button color="Primary" href="/test" Name="Take the Test" />
-          <Button color="Secondary" href="/results" Name="Check your Score" />
+          <Button color="primary" href="/test" Name="Take the Test" />
+          <Button color="secondary" href="/results" Name="Check your Score" />
         </LinkWrapper>
         {/*<TextHolder>
           If you wish to complete the Test or see what your current results look
@@ -77,7 +87,7 @@ const DashContent = () => (
         <div>
         <Button
           className="centerAlign"
-          color="Primary"
+          color="primary"
           href="/profile"
           Name="Enter Profile Pages"
         />
@@ -89,7 +99,7 @@ const DashContent = () => (
         <LinkWrapper>
         </LinkWrapper> */}
       </Card>
-      <Card>
+      <Card style ={iframeCard}>
         <Iframes
           url="https://indd.adobe.com/view/9b04477d-e3ec-4fbd-9a55-043797a3c9a9"
           height="95vh"
