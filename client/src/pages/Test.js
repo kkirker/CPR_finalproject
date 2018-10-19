@@ -28,6 +28,7 @@ class Test extends Component {
 
     constructor(props) {
 
+        //API call gets full test and updates it to state of parent component
         API.getTest("1").then((results) => {
             this.setState({ questions: results.data.questions });
         });
@@ -35,18 +36,21 @@ class Test extends Component {
         super(props);
     
         this.state = {
+        
+            //initial state is that questions do not show on test page
           showQuestions: false,
           questions: []
         };
         this.handleClick = this.handleClick.bind(this);
       }
 
-    componentDidUpdate() {
-        console.log(this.state);
-    }
+    // componentDidUpdate() {
+    //     console.log(this.state);
+    // }
     
     updateUserAnswer = (questionId, userAnswer) => {
         // debugger
+        //user answers to test are assigned as userAnswer to questions object on state
         const questionsWithUserAnswer = this.state.questions.map(question => {
             if (question.questionID === questionId) {
                 return Object.assign({}, question, { userAnswer })
@@ -61,8 +65,8 @@ class Test extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        console.log('foo');
         
+        //tigger to change whether questions display
         this.setState({
             showQuestions: true
         });
@@ -75,20 +79,44 @@ class Test extends Component {
         e.preventDefault();
         let userAnswers = [];
         let testAnswers = [];
+        let incorrectArray = [];
+        let count = 0;
         //gets all user answers from questions object
         userAnswers = this.state.questions.map(question => {
-            // userAnswers.push(question.userAnswer);
             return question.userAnswer
         });
-        console.log(userAnswers);
+        
         //gets all correct answers from questions object
         testAnswers = this.state.questions.map(question => {
             return question.answer
         });
-        console.log(testAnswers);
+        
+        //loops through both above arrays and returns either '-' for correct or user answer to incorrect array, and raises count for each incorrect
+        for( let i=0; i < testAnswers.length; i++) {
+            if (userAnswers[i] === testAnswers[i]) {
+                incorrectArray.push('-')
+            } else {
+                incorrectArray.push(userAnswers[i]);
+                count++;
+
+            };
+        }
+        
+        let score = (100 - count) / 50; 
+
+        console.log(score + '%');
+        
+
         
 
 
+        
+
+
+
+        
+        
+        
     }
 
     getUserAnswers = () => {
@@ -127,21 +155,6 @@ class Test extends Component {
                                 
                                 questions={this.state.questions}
                                 displayTime = {this.displayTimer}/>
-                                {/* {this.state.displayQuestions? this.state.CPRTest.data.questions.map(question => (
-                                    this.state.QuestionsObj.push(
-                                    <Question 
-                                        key={question.id}
-                                        id={question.id}
-                                        question={question.question}
-                                        options={question.options}
-                                        answer={question.answer}
-                                        getUserAnswers={this.getUserAnswers}
-
-                                    />
-
-                                    
-                                ))): null} */}
-                                {/* </TestContainer> */}
                 <TestButtonWrapper >
                     <TestStartButton handleClick={this.handleClick}/>
                 </TestButtonWrapper>
