@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
+import { withRouter } from 'react-router-dom';
+import * as routes from '../constants/routes';
 import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
@@ -25,6 +27,10 @@ const TestButtonWrapper = styled('div') ({
     padding: '50px',
 })
 
+const TestPage = ({ history }) =>
+    <Test history={history} />
+
+
 
 
 class Test extends Component {
@@ -46,6 +52,7 @@ class Test extends Component {
         };
         this.handleClick = this.handleClick.bind(this);
       }
+
 
     // componentDidUpdate() {
     //     console.log(this.state);
@@ -79,6 +86,10 @@ class Test extends Component {
     }
 
     handleSubmit = (currentUser) => (e) => {
+
+        const {
+            history,
+          } = this.props;
 
         console.log(currentUser);
 
@@ -115,21 +126,12 @@ class Test extends Component {
 
         //Update the user with their score to be used on the results page
         API.updateUser(currentUser , {
-            score: count,
+            score: score,
           })
           .then( (updatedUser) => {
            console.log(updatedUser)
+           history.push(routes.RESULTS);
           })
-
-        
-
-
-        
-
-
-
-        
-        
         
     }
 
@@ -173,7 +175,7 @@ class Test extends Component {
                                 displayTime = {this.displayTimer}
                                 />
                 <TestButtonWrapper >
-                    <TestStartButton handleClick={this.handleClick}/>
+                    <TestStartButton handleClick={this.handleClick} />
                 </TestButtonWrapper>
             </TestPageWrapper>
 
