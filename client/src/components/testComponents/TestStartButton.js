@@ -7,8 +7,7 @@ import green from '@material-ui/core/colors/green';
 
 const styles = theme => ({
   container: {
-    display: 'flex',
-    flexWrap: 'wrap',
+
   },
   margin: {
     margin: theme.spacing.unit,
@@ -66,9 +65,13 @@ function TestStartButton(props) {
 
   return (
     <div className={classes.container}>
+    <div className='test-text-container'>
+    <h1 className='red-h1'>Congratulations! You can now take the Exam.</h1>
+      <p>A passing grade is 70% or higher. Just a reminder, if you happen to fail don’t worry there’s unlimited Testing. Just     re-examine &amp; retry. Good luck!</p>
+    </div>
       <MuiThemeProvider theme={theme}>
         <Button variant="contained" onClick={props.handleClick} color="primary" className={classes.margin}>
-          Start Test
+          Start Exam
         </Button>
       </MuiThemeProvider>
     </div>
