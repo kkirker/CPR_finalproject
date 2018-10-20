@@ -120,7 +120,7 @@ class Test extends Component {
             };
         }
         
-        let score = (100 - count) / 50; 
+        let score = ((50 - count) / 50 ) * 100; 
 
         console.log(score + '%');
 
