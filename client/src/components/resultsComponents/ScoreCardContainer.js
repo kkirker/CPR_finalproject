@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import API from '../../utils/API'
+import IncorrectAnswersCard from './IncorrectAnswerCard'
 
 const ResultsContainerStyle = styled('div') ({
     paddingRight: '100px',
@@ -26,13 +27,21 @@ class ScoreCardContainer extends Component {
 
         console.log(props.userEmail);
 
+        //Get the user's score & test results from the db
         API.getUser(props.userEmail).then((results) => {
             console.log(results.data.score)
-            this.setState({ score: results.data.score });
+            this.setState({ score: results.data.score, userAnswers: results.data.testAnswers });
         });
+
+        //Create the new IncorrectAnswers array that will hold an array of objects to render via the IncorrectAnswersCard component 
+        //Get the incorrect answers out of the userAnswers 
+        // if not - or null, then find the index of that answer, get the test question / answer, and construct and object
+        //Object should contain the question number, title, answer, and incorrect user answer
+    
     
         this.state = {
           score: 100,
+          userAnswers: [],
         };
       }
 
@@ -49,6 +58,7 @@ class ScoreCardContainer extends Component {
                     </h1>
                     <div>
                     {/* {props.emoji} */}
+                    {/* forEach through the incorrect answers array here and display via the incorrectanswerscard */}
                     </div>
                 </ScoreStyle>
             </ResultsContainerStyle>
