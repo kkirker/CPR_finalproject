@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import ScoreCardContainer from '../components/resultsComponents/ScoreCardContainer'
+import API from '../utils/API'
 import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
 import withAuthorization from '../components/userLoginComponents/withAuthorization';
 
@@ -10,6 +11,8 @@ const ResultsPageWrapper = styled('div') ({
     height: '1000px',
 })
 class Results extends Component {
+
+    
 
     constructor(props) {
         super(props);
