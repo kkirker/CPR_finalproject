@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'react-emotion'
+import API from '../../utils/API'
 
 const ResultsContainerStyle = styled('div') ({
     paddingRight: '100px',
@@ -17,20 +18,44 @@ const ScoreStyle = styled('div') ({
     minHeight: '400px',
 })
 
-const ScoreCardContainer = (props) => {
-    return (
-        <ResultsContainerStyle>
-            <h1>Test Results</h1>
-            <ScoreStyle>
-                <h1>
-                    Your Score: {props.score} !
-                </h1>
-                <div>
-                {props.emoji}
-                </div>
-            </ScoreStyle>
-        </ResultsContainerStyle>
-    )
+class ScoreCardContainer extends Component {
+
+
+    constructor(props) {
+        super(props);
+
+        console.log(props.userEmail);
+
+        API.getUser(props.userEmail).then((results) => {
+            console.log(results.data.score)
+            this.setState({ score: results.data.score });
+        });
+    
+        this.state = {
+          score: 100,
+        };
+      }
+
+
+
+
+    render(){
+        return (
+            <ResultsContainerStyle>
+                <h1>Test Results</h1>
+                <ScoreStyle>
+                    <h1>
+                        Your Score: {this.state.score}% !
+                    </h1>
+                    <div>
+                    {/* {props.emoji} */}
+                    </div>
+                </ScoreStyle>
+            </ResultsContainerStyle>
+        )
+
+    }
+    
 }
 
 export default ScoreCardContainer
