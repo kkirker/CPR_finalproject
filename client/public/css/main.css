@@ -173,6 +173,22 @@ html, body {
 /******************* END PROFILE PAGE *********************/
 
 
+/******************* TEST PAGE *********************/
+
+
+.test-text-container {
+    margin: 0 auto;
+    display: block;
+}
+
+.test-h1 {
+    color: #3a55b1;
+    margin-top: 20px;
+}
+
+/******************* END TEST PAGE *********************/
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .footer {

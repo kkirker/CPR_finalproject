@@ -26,7 +26,7 @@ const QuestionsStyle = styled('div') ({
 const TestSubmitButtonStyle = styled('div') ({
     display: 'flex',
     justifyContent: 'center',
-    padding: '50px',
+    padding: '25px',
 })
 
 
@@ -36,7 +36,7 @@ const TestContainer = (props) => {
         <AuthUserContext.Consumer>
             { authUser =>
                 <TestContainerStyle>
-                        <h1>CPR Test</h1>
+                        <h1 className='test-h1'>CPR Exam</h1>
                     <QuestionsStyle>
                         
                         {/* {console.log(props)} */}
