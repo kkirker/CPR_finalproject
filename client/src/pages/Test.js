@@ -152,7 +152,7 @@ class Test extends Component {
                                         displaySubmitButton={this.state.showQuestions && <TestSubmitButton/>} 
                                         questions={this.state.questions}
                                         displayTime = {this.displayTimer} />
-                        <TestButtonWrapper >
+                        <TestButtonWrapper style = {this.state.showQuestions ? {display:"none"}:{}}>
                             <TestStartButton handleClick={this.handleClick} />
                         </TestButtonWrapper>
                     </TestPageWrapper>
