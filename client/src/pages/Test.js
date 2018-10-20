@@ -7,6 +7,7 @@ import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
 import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
 import withAuthorization from '../components/userLoginComponents/withAuthorization';
+
 import Timer from '../components/testComponents/Timer'
 // import CPRTest from '../CPRTest.json'
 import API from '../utils/API'
@@ -30,6 +31,9 @@ const TestButtonWrapper = styled('div') ({
 const TestPage = ({ history }) =>
     <Test history={history} />
 
+
+
+
 class Test extends Component {
 
     constructor(props) {
@@ -42,6 +46,7 @@ class Test extends Component {
         super(props);
     
         this.state = {
+        
             //initial state is that questions do not show on test page
           showQuestions: false,
           questions: []
@@ -49,7 +54,13 @@ class Test extends Component {
         this.handleClick = this.handleClick.bind(this);
       }
 
+
+    // componentDidUpdate() {
+    //     console.log(this.state);
+    // }
+    
     updateUserAnswer = (questionId, userAnswer) => {
+        // debugger
         //user answers to test are assigned as userAnswer to questions object on state
         const questionsWithUserAnswer = this.state.questions.map(question => {
             if (question.questionID === questionId) {
@@ -57,9 +68,11 @@ class Test extends Component {
             }
             return question
         })
+
         this.setState({ questions: questionsWithUserAnswer })
         console.log(questionsWithUserAnswer)
     }
+
 
     handleClick = (e) => {
         e.preventDefault();
@@ -75,6 +88,7 @@ class Test extends Component {
     }
 
     handleSubmit = (currentUser) => (e) => {
+
         const {
             history,
           } = this.props;
@@ -104,10 +118,11 @@ class Test extends Component {
             } else {
                 incorrectArray.push(userAnswers[i]);
                 count++;
+
             };
         }
         
-        let score = ((50 - count) / 50 ) * 100; 
+        let score = (100 - count) / 50; 
 
         console.log(score + '%');
 
@@ -128,36 +143,48 @@ class Test extends Component {
     }
 
     displayQuestions = () => {
-        return(
-            <Question/>
-        )
+            return(
+                <Question/>
+            )
+        
     }
 
     displaySubmitButton = () => {
         return(
             <TestSubmitButton handleSubmit={this.handleSubmit}/>
         )
+    
 }
+    
+
 
     render() {
+
+
+
         return(
             <AuthUserContext.Consumer>
                 { authUser =>
                     <TestPageWrapper>
+                {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
+                <TestContainer displayQuestions={this.state.showQuestions && <Question />}
+                                handleSubmit={this.handleSubmit}
+                                updateUserAnswer={this.updateUserAnswer}
+                                displaySubmitButton={this.state.showQuestions && <TestSubmitButton 
+                                />} 
+                                
+                                questions={this.state.questions}
+                                displayTime = {this.displayTimer}
+                                />
+                <TestButtonWrapper style = {this.state.showQuestions ? {display:"none"}:{}}>
+                    <TestStartButton handleClick={this.handleClick} />
+                </TestButtonWrapper>
+            </TestPageWrapper>
 
-                        {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
-                        <TestContainer displayQuestions={this.state.showQuestions && <Question />}
-                                        handleSubmit={this.handleSubmit}
-                                        updateUserAnswer={this.updateUserAnswer}
-                                        displaySubmitButton={this.state.showQuestions && <TestSubmitButton/>} 
-                                        questions={this.state.questions}
-                                        displayTime = {this.displayTimer} />
-                        <TestButtonWrapper >
-                            <TestStartButton handleClick={this.handleClick} />
-                        </TestButtonWrapper>
-                    </TestPageWrapper>
 
                 }
+
+            
             </AuthUserContext.Consumer>
 
         );
