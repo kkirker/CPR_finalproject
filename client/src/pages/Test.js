@@ -5,7 +5,6 @@ import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
 import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
 import withAuthorization from '../components/userLoginComponents/withAuthorization';
-
 import Timer from '../components/testComponents/Timer'
 // import CPRTest from '../CPRTest.json'
 import API from '../utils/API'
@@ -109,7 +108,7 @@ class Test extends Component {
             };
         }
         
-        let score = (100 - count) / 50; 
+        let score = (50 - count) / 50; 
 
         console.log(score + '%');
 
@@ -121,15 +120,6 @@ class Test extends Component {
            console.log(updatedUser)
           })
 
-        
-
-
-        
-
-
-
-        
-        
         
     }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
 import ScoreCardContainer from '../components/resultsComponents/ScoreCardContainer'
+import API from '../utils/API'
 
 const ResultsPageWrapper = styled('div') ({
     backgroundColor: '#A9A9A9',
@@ -9,16 +10,23 @@ const ResultsPageWrapper = styled('div') ({
 })
 class Results extends Component {
 
+    
+
     constructor(props) {
         super(props);
+
+        API.getUser(userEmail).then((results) => {
+            this.setState({ user: results.data });
+        });
     
         this.state = {
-          Score: 100, 
+          score: '',
+          user: {},
         };
       }
 
     presentEmoji = (state) => {
-        if (this.state.Score > 80) {
+        if (this.state.score > 80) {
             return(
                 <img src='http://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Face_Emoji_with_Blushed_Cheeks_grande.png?v=1480481056' width='20%' height='20%'/>
             )
@@ -33,7 +41,7 @@ class Results extends Component {
         
         return(
             <ResultsPageWrapper>
-                <ScoreCardContainer score={this.state.Score} emoji={this.presentEmoji()}/>
+                <ScoreCardContainer score={this.state.score} emoji={this.presentEmoji()}/>
             </ResultsPageWrapper>
         )
     }
