@@ -24,6 +24,7 @@ const TestButtonWrapper = styled('div') ({
     display: 'flex',
     justifyContent: 'center',
     padding: '50px',
+    margin: '0 auto'
 })
 
 const TestPage = ({ history }) =>
@@ -70,6 +71,7 @@ class Test extends Component {
         console.log(this.state.showQuestions);
         this.displayQuestions();
         this.displaySubmitButton();
+        
     }
 
     handleSubmit = (currentUser) => (e) => {
@@ -142,6 +144,7 @@ class Test extends Component {
             <AuthUserContext.Consumer>
                 { authUser =>
                     <TestPageWrapper>
+
                         {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
                         <TestContainer displayQuestions={this.state.showQuestions && <Question />}
                                         handleSubmit={this.handleSubmit}
@@ -153,6 +156,7 @@ class Test extends Component {
                             <TestStartButton handleClick={this.handleClick} />
                         </TestButtonWrapper>
                     </TestPageWrapper>
+
                 }
             </AuthUserContext.Consumer>
 
