@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import styled from 'react-emotion'
+import { withRouter } from 'react-router-dom';
+import * as routes from '../constants/routes';
 import TestContainer from '../components/testComponents/TestContainer'
 import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
+import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
+import withAuthorization from '../components/userLoginComponents/withAuthorization';
+
 import Timer from '../components/testComponents/Timer'
 // import CPRTest from '../CPRTest.json'
 import API from '../utils/API'
@@ -21,6 +26,10 @@ const TestButtonWrapper = styled('div') ({
     justifyContent: 'center',
     padding: '50px',
 })
+
+const TestPage = ({ history }) =>
+    <Test history={history} />
+
 
 
 
@@ -43,6 +52,7 @@ class Test extends Component {
         };
         this.handleClick = this.handleClick.bind(this);
       }
+
 
     // componentDidUpdate() {
     //     console.log(this.state);
@@ -75,12 +85,20 @@ class Test extends Component {
         this.displaySubmitButton();
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = (currentUser) => (e) => {
+
+        const {
+            history,
+          } = this.props;
+
+        console.log(currentUser);
+
         e.preventDefault();
         let userAnswers = [];
         let testAnswers = [];
         let incorrectArray = [];
         let count = 0;
+
         //gets all user answers from questions object
         userAnswers = this.state.questions.map(question => {
             return question.userAnswer
@@ -105,17 +123,15 @@ class Test extends Component {
         let score = (100 - count) / 50; 
 
         console.log(score + '%');
-        
 
-        
-
-
-        
-
-
-
-        
-        
+        //Update the user with their score to be used on the results page
+        API.updateUser(currentUser , {
+            score: score,
+          })
+          .then( (updatedUser) => {
+           console.log(updatedUser)
+           history.push(routes.RESULTS);
+          })
         
     }
 
@@ -145,7 +161,9 @@ class Test extends Component {
 
 
         return(
-            <TestPageWrapper>
+            <AuthUserContext.Consumer>
+                { authUser =>
+                    <TestPageWrapper>
                 {/* <Timer display={this.state.showQuestions} props = {this.props}/> */}
                 <TestContainer displayQuestions={this.state.showQuestions && <Question />}
                                 handleSubmit={this.handleSubmit}
@@ -154,14 +172,25 @@ class Test extends Component {
                                 />} 
                                 
                                 questions={this.state.questions}
-                                displayTime = {this.displayTimer}/>
+                                displayTime = {this.displayTimer}
+                                />
                 <TestButtonWrapper >
-                    <TestStartButton handleClick={this.handleClick}/>
+                    <TestStartButton handleClick={this.handleClick} />
                 </TestButtonWrapper>
             </TestPageWrapper>
+
+
+                }
+
+            
+            </AuthUserContext.Consumer>
 
         );
     }
 }
 
-export default Test;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(Test);
+
+// export default Test;
