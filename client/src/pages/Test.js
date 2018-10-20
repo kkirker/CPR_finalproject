@@ -24,6 +24,7 @@ const TestButtonWrapper = styled('div') ({
     display: 'flex',
     justifyContent: 'center',
     padding: '50px',
+    margin: '0 auto'
 })
 
 const TestPage = ({ history }) =>
@@ -82,6 +83,7 @@ class Test extends Component {
         console.log(this.state.showQuestions);
         this.displayQuestions();
         this.displaySubmitButton();
+        
     }
 
     handleSubmit = (currentUser) => (e) => {
@@ -173,7 +175,7 @@ class Test extends Component {
                                 questions={this.state.questions}
                                 displayTime = {this.displayTimer}
                                 />
-                <TestButtonWrapper >
+                <TestButtonWrapper style = {this.state.showQuestions ? {display:"none"}:{}}>
                     <TestStartButton handleClick={this.handleClick} />
                 </TestButtonWrapper>
             </TestPageWrapper>
