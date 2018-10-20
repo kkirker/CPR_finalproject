@@ -129,6 +129,7 @@ class Test extends Component {
         //Update the user with their score to be used on the results page
         API.updateUser(currentUser , {
             score: score,
+            testAnswers: incorrectArray,
           })
           .then( (updatedUser) => {
            console.log(updatedUser)
@@ -180,7 +181,6 @@ class Test extends Component {
                     <TestStartButton handleClick={this.handleClick} />
                 </TestButtonWrapper>
             </TestPageWrapper>
-
 
                 }
 
