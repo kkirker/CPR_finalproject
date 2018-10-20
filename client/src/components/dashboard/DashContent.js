@@ -14,8 +14,6 @@ const Card = styled("div")({
   borderRadius: "5px"
 });
 
-
-
 const Container = styled("div")({
   width: "100%",
   height: "100%",
@@ -41,10 +39,7 @@ const ContentHolder = styled("div")({
   height : "100%"
 });
 
-// const TextHolder = styled("div")({
-//   fontFamily= "'Niramit', sans-serif",
-//   fontSize= "24px"
-// });
+
 
 const Iframes = styled(Iframe)({
   margin:"0 auto"
@@ -53,10 +48,7 @@ const Iframes = styled(Iframe)({
 const centerButton ={
   justifyContent: "space-evenly"
 }
- 
-const uniqueButton={
 
-}
 
 const iframeCard={
   height: "100vh"
@@ -66,22 +58,11 @@ const DashContent = () => (
   <Container>
     {/* <NavLinks /> */}
     <ContentHolder>
-      {/* <Card>
-        <h4>
-        You can take the tests, check your scores, update your
-        profile, or even look up more resources on CPR and for written exam.
-
-        </h4>
-      </Card> */}
       <Card style = {centerButton}>
         <LinkWrapper>
           <Button color="primary" href="/test" Name="Take the Test" />
           <Button color="secondary" href="/results" Name="Check your Score" />
         </LinkWrapper>
-        {/*<TextHolder>
-          If you wish to complete the Test or see what your current results look
-          like. Please click on the two links to the left.
-        </TextHolder> */}
       </Card>
       <Card style = {centerButton}>
         <div>
@@ -92,12 +73,6 @@ const DashContent = () => (
           Name="Enter Profile Pages"
         />
         </div>
-        {/* <div>
-          If you wish to update your profile to include more information, please
-          click on the link to the right?
-        </div>
-        <LinkWrapper>
-        </LinkWrapper> */}
       </Card>
       <Card style ={iframeCard}>
         <Iframes
