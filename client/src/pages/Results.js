@@ -26,17 +26,6 @@ class Results extends Component {
         };
       }
 
-    // presentEmoji = (state) => {
-    //     if (this.state.score > 80) {
-    //         return(
-    //             <img src='http://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Face_Emoji_with_Blushed_Cheeks_grande.png?v=1480481056' width='20%' height='20%'/>
-    //         )
-    //     } else {
-    //         return(
-    //             <img src='https://cdn.shopify.com/s/files/1/1061/1924/files/Sad_Face_Emoji.png?9898922749706957214' width='20%' height='20%'/>
-    //         )
-    // }}
-
     render() {
 
         
