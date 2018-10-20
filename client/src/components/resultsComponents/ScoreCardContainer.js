@@ -45,7 +45,7 @@ class ScoreCardContainer extends Component {
                 <h1>Test Results</h1>
                 <ScoreStyle>
                     <h1>
-                        Your Score: {this.state.score} !
+                        Your Score: {this.state.score}% !
                     </h1>
                     <div>
                     {/* {props.emoji} */}
