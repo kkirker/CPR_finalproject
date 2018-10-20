@@ -7,7 +7,6 @@ import Question from '../components/testComponents/Question'
 import TestStartButton from '../components/testComponents/TestStartButton'
 import AuthUserContext from '../components/userLoginComponents/AuthUserContext';
 import withAuthorization from '../components/userLoginComponents/withAuthorization';
-
 import Timer from '../components/testComponents/Timer'
 // import CPRTest from '../CPRTest.json'
 import API from '../utils/API'
