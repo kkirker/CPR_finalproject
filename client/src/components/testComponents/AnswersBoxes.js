@@ -47,6 +47,33 @@ class RadioButtonsGroup extends React.Component {
   render() {
     const { classes } = this.props;
 
+    //Figure out if a C option exists and if not, only display the T/F with 2 checkboxes
+    if(this.props.options['C'] == null ){
+
+      return (
+        <div className={classes.root}>
+          <FormControl component="fieldset" className={classes.formControl}>
+            <FormLabel component="legend" question={this.props.question}>{this.props.question}</FormLabel>
+            <RadioGroup
+              aria-label="CPRTest"
+              name="CPRTest"
+              className={classes.group}
+              value={this.state.value}
+              onChange={this.handleChange}
+            >
+          
+              <FormControlLabel value="A" control={<Radio />} label={this.props.options.A} />
+              <FormControlLabel value="B" control={<Radio />} label={this.props.options.B} />
+              {/* <FormControlLabel value="C" control={<Radio />} label={this.props.options.C} />
+              <FormControlLabel value="D" control={<Radio />} label={this.props.options.D} /> */}
+            </RadioGroup>
+          </FormControl>
+        </div>
+      );
+
+    }
+  else{
+
     return (
       <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
@@ -58,6 +85,7 @@ class RadioButtonsGroup extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
+        
             <FormControlLabel value="A" control={<Radio />} label={this.props.options.A} />
             <FormControlLabel value="B" control={<Radio />} label={this.props.options.B} />
             <FormControlLabel value="C" control={<Radio />} label={this.props.options.C} />
@@ -66,6 +94,9 @@ class RadioButtonsGroup extends React.Component {
         </FormControl>
       </div>
     );
+
+  }
+    
   }
 }
 
