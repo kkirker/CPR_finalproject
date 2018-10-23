@@ -21,6 +21,7 @@ const QuestionsStyle = styled('div') ({
     borderRadius: '25px',
     flexDirection: 'column',
     backgroundColor: 'rgb(239, 239, 239)',
+    marginTop: '20px'
 })
 
 const TestSubmitButtonStyle = styled('div') ({

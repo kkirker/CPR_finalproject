@@ -53,7 +53,7 @@ class RadioButtonsGroup extends React.Component {
       return (
         <div className={classes.root}>
           <FormControl component="fieldset" className={classes.formControl}>
-            <FormLabel component="legend" question={this.props.question}>{this.props.question}</FormLabel>
+            <FormLabel component="legend" question={this.props.question}><strong>{this.props.question}</strong></FormLabel>
             <RadioGroup
               aria-label="CPRTest"
               name="CPRTest"
@@ -77,7 +77,7 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className={classes.root}>
         <FormControl component="fieldset" className={classes.formControl}>
-          <FormLabel component="legend" question={this.props.question}>{this.props.question}</FormLabel>
+          <FormLabel component="legend" question={this.props.question}><strong>{this.props.question}</strong></FormLabel>
           <RadioGroup
             aria-label="CPRTest"
             name="CPRTest"
