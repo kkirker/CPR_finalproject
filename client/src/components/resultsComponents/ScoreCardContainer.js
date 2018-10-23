@@ -7,6 +7,8 @@ const ResultsContainerStyle = styled('div') ({
     paddingRight: '100px',
     paddingLeft: '100px',
     textAlign: 'center',
+    
+    
 })
 
 const ScoreStyle = styled('div') ({
@@ -17,6 +19,13 @@ const ScoreStyle = styled('div') ({
     border: '0 0 4px 4px rgb(221,221,221)',
     borderStyle: 'solid',
     minHeight: '400px',
+    border: '0 0 2px 2px',
+    borderStyle: 'solid',
+    borderColor: 'rgb(255, 59, 63)',
+    borderRadius: '25px',
+    flexDirection: 'column',
+    backgroundColor: 'rgb(239, 239, 239)',
+    marginTop: '20px'
 })
 
 class ScoreCardContainer extends Component {
@@ -79,9 +88,9 @@ class ScoreCardContainer extends Component {
 
             return (
                 <ResultsContainerStyle>
-                    <h1>Test Results</h1>
+                    <h1 className='results-h1'>Exam Results</h1>
                     <ScoreStyle>
-                        <h1>
+                        <h1 className='red-h1'>
                             Your Score: {this.state.score}% !
                         </h1>
                         <div>
